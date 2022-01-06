@@ -1,32 +1,31 @@
 import React from "react";
 
-export default (props)=>{
-    return (
+export default function Signature (props){
+    let [type, image, name, credentials, title, college, department, address, location, phone, email] = props.data;
+    let details = [title, college, department, address, location, phone]
+    return ( 
     <div>
+        {type==="simple" ? 
         <p className="signature">
-            <img className="sigImage"
-            src={props.image} 
-            nosend="1" />
+            <img className="sigImage" src={image} alt="college-img" nosend="1" />
             <br />
             <br />
-            <span style="font-size: 1.6em">{props.name}, {props.credentials}</span>
+            <span className="name">{name} 
+                {credentials && <span>, {credentials} </span>}
+            </span>
             <br />
-            {props.title}
-            <br />
-            {props.college}
-            <br />
-            {props.department}
-            <br />
-            {props.address}
-            <br />
-            {props.location}
-            <br />
-            {props.phone}
-            <br />
-            <a href={"mailto:"+props.email} className="email">
-                zacharyneill@gmail.com
-            </a>
+            {details.map((detail, index)=>(
+                <span key={"detail"+index}>
+                {detail} 
+                {detail && <br /> }
+                </span>))}
+            {email && <a href={"mailto:"+email} className="email">
+                {email}
+            </a> }
         </p>
-    </div>
+        : <p>
+            Full
+        </p>}
+    </div> 
     );
 }

@@ -1,20 +1,25 @@
 body {
   font-size: 14px; 
-  line-height: 18px
+  line-height: 18px;
 };
 
 .signature {
-  font-size: 14px; color: #0033a0;  line-height: 18px; 
+  font-size: 14px; 
+  color: #0033a0;
+  line-height: 18px; 
   font-family: georgia, times, serif;
-}
+};
 
 .sigImage {
   border: 0;
-  width: 100px; height:71px;
+  width: 100px; 
+  height:71px;
 };
-
+.name {
+  font-size: 1.6em;
+};
 .email {
-  font-family:Arial, sans-serif; 
-  font-weight:normal; 
-  text-decoration: underline"
+  font-family: Arial, sans-serif; 
+  font-weight: normal; 
+  text-decoration: underline;
 };
