@@ -1,8 +1,8 @@
 import React from "react";
 
 export default function Signature (props){
-    let [type, image, name, credentials, title, college, department, address, location, phone, email] = props.data;
-    let details = [title, college, department, address, location, phone]
+    let [type, image, name, credentials, pronouns, title, college, department, address, location, phone, email] = props.data;
+    let details = [title, college, department, address, location, phone];
     return ( 
     <div>
         {type==="simple" ? 
@@ -23,9 +23,50 @@ export default function Signature (props){
                 {email}
             </a> }
         </p>
-        : <p>
-            Full
-        </p>}
+        : <table className="signature">
+            <tbody>
+                <tr>
+                    <td>
+                        <img className="sigImage" src={image} alt="college-img" nosend="1" />
+                    </td>
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span className="name">{name} 
+                                            {credentials && <span>, {credentials}</span>}
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        {pronouns && <i className="pronouns">{pronouns}</i>}
+                                    </td>
+                                </tr>
+                                {details.map((detail, index)=>(
+                                    <tr key={"td"+index}>
+                                        <td>
+                                            <span>
+                                                {detail} 
+                                                {detail && <br /> }
+                                            </span>
+                                        </td>
+                                    </tr>
+                                ))}
+                                <tr className="email">
+                                    <td>
+                                        {email && <a href={"mailto:"+email} className="email">
+                                        {email}
+                                        </a> }
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>}
     </div> 
     );
 }

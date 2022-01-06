@@ -11,3 +11,6 @@ body {
 .name {
   font-size: 18pt;
 }
+.email {
+  color: #BFDBEC;
+}

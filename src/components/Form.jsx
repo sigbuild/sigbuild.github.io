@@ -5,6 +5,7 @@ export default function Form (props){
     const [image, setImage] = useState("");
     const [name, setName] = useState("");
     const [credentials, setCredentials] = useState("");
+    const [pronouns, setPronouns] = useState("");
     const [title, setTitle] = useState("");
     const [college, setCollege] = useState("");
     const [department, setDepartment] = useState("");
@@ -20,8 +21,9 @@ export default function Form (props){
 
     function handleSubmit(event){
         event.preventDefault();
-        props.addLog([type, image, name, credentials, title, college, department, address, location, phone, email])
+        props.addLog([type, image, name, credentials, pronouns, title, college, department, address, location, phone, email])
     };
+
     return (<div>
     <form onSubmit={event => handleSubmit(event)}>
         <label>Name</label>
@@ -30,6 +32,8 @@ export default function Form (props){
         <input name="credentials" value={credentials} type="text" onChange={event => setCredentials(event.target.value)} placeholder="e.g. Ph.D"/>
         <label>Title</label>
         <input name="title" value={title} type="text" onChange={event => setTitle(event.target.value)} placeholder="e.g. Director"/>
+        <label>Pronouns</label>
+        <input name="pronouns" value={pronouns} type="text" onChange={event => setPronouns(event.target.value)} placeholder="e.g. He/him"/>
         <label>College</label>
         <input name="college" value={college} type="text" onChange={event => setCollege(event.target.value)} placeholder="e.g. Berea College"/>
         <label>Department</label>
