@@ -16,8 +16,8 @@ export default function App() {
   };
 
   return (
-    <div onMouseMove={event=>handleUserState(event)} className="App">
-      <Form addLog={logData} requestUpdate={userChange} />
+    <div className="App">
+      <Form addLog={logData} />
       <Table data={data} />
     </div>
   );

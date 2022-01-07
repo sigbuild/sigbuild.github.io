@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import Input from "./Input";
 export default function Form (props){
 
     const [image, setImage] = useState("/images/primary_rgb.png");
@@ -13,9 +13,11 @@ export default function Form (props){
     const [location, setLocation] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
-    const [button, setButton] = useState("Build");
+    const [button, setButton] = useState("Build"); 
+    let data = [image, name, credentials, pronouns, title, college, department, address, location, phone, email];
+    
     function updateLogs(){
-        props.addLog([image, name, credentials, pronouns, title, college, department, address, location, phone, email]);
+        props.addLog(data);
     };
 
     function handleImage(selection){
@@ -50,41 +52,18 @@ export default function Form (props){
     return (
     <div onKeyPress={event => handleKeypress(event)} onMouseMove={event => handleMouse(event)} className="form">
         <form onSubmit={event => handleSubmit(event)}>
-            <label>Select image</label>
-            <select name="image" onChange={event => handleImage(event.target.value)}>
-                <option value="primary_rgb.png">Primary Blue</option>
-                <option value="primary_black.png">Primary Black</option>
-                <option value="primary_white.png">Primary White</option>
-                <option value="secondary_blue.png">Secondary Blue</option>
-                <option value="secondary_black.png">Secondary Black</option>
-                <option value="secondary_white.png">Secondary White</option>
-                <option value="horizontal_rgb.png">Horizontal Blue</option>
-                <option value="horizontal_black.png">Horizontal Black</option>
-                <option value="horizontal_white.png">Horizontal White</option>
-                <option value="ribbon.png">Ribbon</option>
-                <option value="initials.png">BC Initials</option>
-            </select>
-            <label>Name</label>
-            <input name="name" value={name} type="text" onChange={event => setName(event.target.value)} placeholder="e.g. Zachary Neill"/>
-            <label>Credentials</label>
-            <input name="credentials" value={credentials} type="text" onChange={event => setCredentials(event.target.value)} placeholder="e.g. Ph.D"/>
-            <label>Title</label>
-            <input name="title" value={title} type="text" onChange={event => setTitle(event.target.value)} placeholder="e.g. Director"/>
-            <label>Pronouns</label>
-            <input name="pronouns" value={pronouns} type="text" onChange={event => setPronouns(event.target.value)} placeholder="e.g. He/him"/>
-            <label>College</label>
-            <input name="college" value={college} type="text" onChange={event => setCollege(event.target.value)} placeholder="e.g. Berea College"/>
-            <label>Department</label>
-            <input name="department" value={department} type="text" onChange={event => setDepartment(event.target.value)} placeholder="e.g. Department of Computer Science"/>
-            <label>Address</label>
-            <input name="address" value={address} type="text" onChange={event => setAddress(event.target.value)} placeholder="e.g. 101 Chestnut St. or Edwards Building"/>
-            <label>Location</label>
-            <input name="location" value={location} type="text" onChange={event => setLocation(event.target.value)} placeholder="e.g. Berea, KY or Room 101"/>
-            <label>Phone</label>
-            <input name="phone" value={phone} type="text" onChange={event => setPhone(event.target.value)} placeholder="e.g. 859-985-3369"/>
-            <label>Email</label>
-            <input name="email" value={email} type="text" onChange={event => setEmail(event.target.value)} placeholder="e.g. neillz@berea.edu"/>
-            
+            <Input label="image" onUpdate={event => handleImage(event)} />
+            <Input label="name" onUpdate={event => setName(event)} example="e.g. Zachary Neill" />
+            <Input label="credentials" onUpdate={event => setCredentials(event)} example="e.g. Ph.D" />
+            <Input label="title" onUpdate={event => setTitle(event)} example="e.g. Director" />
+            <Input label="pronouns" onUpdate={event => setPronouns(event)} example="e.g. He/him" />
+            <Input label="college" onUpdate={event => setCollege(event)} example="e.g. Berea College" />
+            <Input label="department" onUpdate={event => setDepartment(event)} example="e.g. Department of Computer Science" />
+            <Input label="address" onUpdate={event => setAddress(event)} example="e.g. 101 Chestnut St. or Edwards Building" />
+            <Input label="location" onUpdate={event => setLocation(event)} example="e.g. Berea, KY or Room 101" />
+            <Input label="phone" onUpdate={event => setPhone(event)} example="e.g. 859-985-3369" />
+            <Input label="email" onUpdate={event => setEmail(event)} example="e.g. neillz@berea.edu" />
+
             <input name="submit" type="submit" value={button} />
             <input type="button" onClick={handlePrefill} value="Pre-fill with Berea College Values" />
         </form>
