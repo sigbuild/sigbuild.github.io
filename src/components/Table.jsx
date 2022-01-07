@@ -1,12 +1,16 @@
 import React from "react";
-import Signature from "./Signature";
+import SimpleSignature from "./signatures/simpleSignature";
+import FullSignature from "./signatures/fullSignature";
 
 export default function Table (props){
+
     return (
         <div className="table">
-            {props.data.length &&
-            <Signature data={props.data} />
-            }
+            { props.data.length && 
+            <div>
+                <SimpleSignature data={props.data}/>
+                <FullSignature data={props.data} />
+            </div>}
         </div>
     );
 };

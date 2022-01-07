@@ -1,35 +1,17 @@
 import React from "react";
 
-export default function Signature (props){
-    let [type, image, name, credentials, pronouns, title, college, department, address, location, phone, email] = props.data;
+export default function SimpleSignature (props){
+    let [image, name, credentials, pronouns, title, college, department, address, location, phone, email] = props.data;
     let details = [title, college, department, address, location, phone];
     return ( 
     <div>
-        {type==="simple" ? 
-        <p className="signature">
-            <img className="sigImage" src={image} alt="college-img" nosend="1" />
-            <br />
-            <br />
-            <span className="name">{name} 
-                {credentials && <span>, {credentials} </span>}
-            </span>
-            <br />
-            {details.map((detail, index)=>(
-                <span key={"detail"+index}>
-                {detail} 
-                {detail && <br /> }
-                </span>))}
-            {email && <a href={"mailto:"+email} className="email">
-                {email}
-            </a> }
-        </p>
-        : <table className="signature">
+        <table className="signature table">
             <tbody>
                 <tr>
-                    <td>
-                        <img className="sigImage" src={image} alt="college-img" nosend="1" />
+                    <td className="top">
+                        <img className={image==="/images/ribbon.png" ? "image ribbon": "image"} src={image} alt="college-img" nosend="1" />
                     </td>
-                    <td>
+                    <td className="border">
                         <table>
                             <tbody>
                                 <tr>
@@ -39,17 +21,18 @@ export default function Signature (props){
                                         </span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr className="pronouns">
                                     <td>
-                                        {pronouns && <i className="pronouns">{pronouns}</i>}
+                                        {pronouns && <i>{pronouns}</i>}
                                     </td>
                                 </tr>
-                                {details.map((detail, index)=>(
-                                    <tr key={"td"+index}>
+                                {details.map((detail)=>(
+                                    detail && 
+                                    <tr className="top" key={"td"+detail}>
                                         <td>
                                             <span>
                                                 {detail} 
-                                                {detail && <br /> }
+                                                <br />
                                             </span>
                                         </td>
                                     </tr>
@@ -66,7 +49,7 @@ export default function Signature (props){
                     </td>
                 </tr>
             </tbody>
-        </table>}
+        </table>
     </div> 
     );
 }

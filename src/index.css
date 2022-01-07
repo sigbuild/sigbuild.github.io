@@ -3,14 +3,37 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.border {
+  border-left: solid 1pt;
+  padding-left: 8pt;
+}
 .signature {
   color: #005A8B;
   font-size: 11pt;
 }
+.image {
+  max-width: 110pt;
+  max-height: 110pt;
+  margin-right: 2pt;
+}
+.ribbon {
+  padding-right: 9pt;
+}
+.top {
+  vertical-align: top;
+  margin-top: 0;
+}
 .name {
   font-size: 18pt;
+  margin: 0 
 }
 .email {
   color: #BFDBEC;
+  text-decoration: none;
 }
+.table {
+  border-collapse: collapse;
+}
+.form {
+  margin-bottom: 3rem;
+};
