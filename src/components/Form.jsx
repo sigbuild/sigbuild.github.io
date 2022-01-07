@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 
 export default function Form (props){
+
     const [image, setImage] = useState("/images/primary_rgb.png");
     const [name, setName] = useState("");
     const [credentials, setCredentials] = useState("");
@@ -12,24 +13,42 @@ export default function Form (props){
     const [location, setLocation] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
+    const [button, setButton] = useState("Build");
+    function updateLogs(){
+        props.addLog([image, name, credentials, pronouns, title, college, department, address, location, phone, email]);
+    };
 
     function handleImage(selection){
         setImage("/images/"+selection);
-    }
+    };
+
+    function handleMouse(event){
+        updateLogs();
+    };
+
+    function handleKeypress(event){
+        updateLogs();
+        setButton("Quick Syncing");
+        setTimeout(()=>{
+            button!=="Quick Syncing" && setButton("Update");
+        }, 500);
+    };
 
     function handleSubmit(event){
+        setButton("Built!");
         event.preventDefault();
-        props.addLog([image, name, credentials, pronouns, title, college, department, address, location, phone, email])
+        updateLogs();
     };
 
     function handlePrefill(){
         setImage("/images/primary_rgb.png");
         setCollege("Berea College");
         setLocation("Berea, KY");
+        updateLogs();
     };
 
     return (
-    <div className="form">
+    <div onKeyPress={event => handleKeypress(event)} onMouseMove={event => handleMouse(event)} className="form">
         <form onSubmit={event => handleSubmit(event)}>
             <label>Select image</label>
             <select name="image" onChange={event => handleImage(event.target.value)}>
@@ -44,7 +63,6 @@ export default function Form (props){
                 <option value="horizontal_white.png">Horizontal White</option>
                 <option value="ribbon.png">Ribbon</option>
                 <option value="initials.png">BC Initials</option>
-
             </select>
             <label>Name</label>
             <input name="name" value={name} type="text" onChange={event => setName(event.target.value)} placeholder="e.g. Zachary Neill"/>
@@ -67,8 +85,8 @@ export default function Form (props){
             <label>Email</label>
             <input name="email" value={email} type="text" onChange={event => setEmail(event.target.value)} placeholder="e.g. neillz@berea.edu"/>
             
-            <input name="simple" type="submit" value="Build Signature" />
-            <input type="button" onClick={handlePrefill} value="Pre-fill with Default Berea College Values" />
+            <input name="submit" type="submit" value={button} />
+            <input type="button" onClick={handlePrefill} value="Pre-fill with Berea College Values" />
         </form>
     </div>
     )
