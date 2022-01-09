@@ -1,4 +1,5 @@
 import React from "react";
+import {InputLabel, Select, MenuItem, FormControl} from "@material-ui/core";
 
 export default function Input (props){
     // const [file, setFile] = useState("");
@@ -14,25 +15,28 @@ export default function Input (props){
     return (
     <div>
         { props.label==="image" &&
-            <div>
-                <label>Select image: </label>
-                <select name={props.label} onChange={event => props.onUpdate(event.target.value)}>
-                    <option value="primary_rgb.png">Primary Blue</option>
-                    <option value="primary_black.png">Primary Black</option>
-                    <option value="primary_white.png">Primary White</option>
-                    <option value="secondary_blue.png">Secondary Blue</option>
-                    <option value="secondary_black.png">Secondary Black</option>
-                    <option value="secondary_white.png">Secondary White</option>
-                    <option value="horizontal_rgb.png">Horizontal Blue</option>
-                    <option value="horizontal_black.png">Horizontal Black</option>
-                    <option value="horizontal_white.png">Horizontal White</option>
-                    <option value="isns_blue.png">IS&S Blue</option>
-                    <option value="isns_black.png">IS&S Black</option>
-                    <option value="isns_white.png">IS&S White</option>
-                    <option value="ribbon.png">Ribbon</option>
-                    <option value="initials.png">BC Initials</option>
-                </select> 
-            </div> 
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <InputLabel id="image-select-label">Image</InputLabel>
+                <Select 
+                    labelId="image-select-label"
+                    label="Select Image"
+                    onChange={event => props.onUpdate(event.target.value)}>
+                    <MenuItem value="primary_rgb.png">Primary Blue</MenuItem>
+                    <MenuItem value="primary_black.png">Primary Black</MenuItem>
+                    <MenuItem value="primary_white.png">Primary White</MenuItem>
+                    <MenuItem value="secondary_blue.png">Secondary Blue</MenuItem>
+                    <MenuItem value="secondary_black.png">Secondary Black</MenuItem>
+                    <MenuItem value="secondary_white.png">Secondary White</MenuItem>
+                    <MenuItem value="horizontal_rgb.png">Horizontal Blue</MenuItem>
+                    <MenuItem value="horizontal_black.png">Horizontal Black</MenuItem>
+                    <MenuItem value="horizontal_white.png">Horizontal White</MenuItem>
+                    <MenuItem value="isns_blue.png">IS&S Blue</MenuItem>
+                    <MenuItem value="isns_black.png">IS&S Black</MenuItem>
+                    <MenuItem value="isns_white.png">IS&S White</MenuItem>
+                    <MenuItem value="ribbon.png">Ribbon</MenuItem>
+                    <MenuItem value="initials.png">BC Initials</MenuItem>
+                </Select>
+            </FormControl>
         }
         {/* { props.label==="upload" && 
             <div>
@@ -43,14 +47,17 @@ export default function Input (props){
             </div>
         } */}
         { props.label==="color" && 
-            <div>
-                <label>Select text color: </label>
-                <select name={props.label} onChange={event => props.onUpdate(event.target.value)}>
-                    <option value="#005A8B">Berea Blue</option>
-                    <option value={null}>Black/Default</option>
-                    <option value="#BFDBEC">Berea Light Blue</option>
-                </select> 
-            </div> 
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <InputLabel id="color-select-label">Text Color</InputLabel>
+                <Select value={props.value}
+                    labelId="color-select-label"
+                    label="Text Color"
+                    onChange={event => props.onUpdate(event.target.value)}>
+                    <MenuItem value="#005A8B">Berea Blue</MenuItem>
+                    <MenuItem value="initial">Black/Default</MenuItem>
+                    <MenuItem value="#BFDBEC">Berea Light Blue</MenuItem>
+                </Select>
+            </FormControl>
         }
     </div>
     )
