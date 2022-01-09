@@ -3,7 +3,6 @@ import SimpleSignature from "./signatures/simpleSignature";
 import FullSignature from "./signatures/fullSignature";
 
 export default function Table (props){
-
     return (
         <div className="table">
             { props.data.length && 

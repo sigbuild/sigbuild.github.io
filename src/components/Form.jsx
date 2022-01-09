@@ -13,8 +13,9 @@ export default function Form (props){
     const [location, setLocation] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
-    const [button, setButton] = useState("Build"); 
-    let data = [image, name, credentials, pronouns, title, college, department, address, location, phone, email];
+    const [button, setButton] = useState("Build");
+    const [color, setColor] = useState("blue");
+    let data = [image, name, credentials, pronouns, title, college, department, address, location, phone, email, color];
     
     function updateLogs(){
         props.addLog(data);
@@ -22,6 +23,10 @@ export default function Form (props){
 
     function handleImage(selection){
         setImage("/images/"+selection);
+    };
+
+    function handleColor(selection){
+        setColor(selection);
     };
 
     function handleMouse(event){
@@ -53,6 +58,7 @@ export default function Form (props){
     <div onKeyPress={event => handleKeypress(event)} onMouseMove={event => handleMouse(event)} className="form">
         <form onSubmit={event => handleSubmit(event)}>
             <Input label="image" onUpdate={event => handleImage(event)} />
+            <Input label="color" onUpdate={event => handleColor(event)} />
             <Input label="name" onUpdate={event => setName(event)} example="e.g. Zachary Neill" />
             <Input label="credentials" onUpdate={event => setCredentials(event)} example="e.g. Ph.D" />
             <Input label="title" onUpdate={event => setTitle(event)} example="e.g. Director" />

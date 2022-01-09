@@ -1,11 +1,11 @@
 import React from "react";
 
 export default function simpleSignature (props){
-    let [image, name, credentials, pronouns, title, college, department, address, location, phone, email] = props.data;
+    let [image, name, credentials, , title, college, department, address, location, phone, email, color] = props.data;
     let details = [title, college, department, address, location, phone];
     return ( 
     <div>
-        <p className="signature">
+        <p className="signature" style={{color: color}}>
             <img className="image" src={image} alt="college-img" nosend="1" />
             <br />
             <span className="name">{name} 
@@ -15,7 +15,7 @@ export default function simpleSignature (props){
             {details.map((detail, index)=>(
                 detail && <span key={"detail"+index}>{detail} <br /> </span>
             ))}
-            {email && <a href={"mailto:"+email} className="email">
+            {email && <a href={"mailto:"+email} className="email" style={{color: color}}>
                 {email}
             </a> }
         </p>

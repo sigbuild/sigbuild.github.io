@@ -16,7 +16,7 @@ body {
   max-height: 110pt;
   margin-right: 2pt;
 }
-.ribbon {
+.border-padding {
   padding-right: 9pt;
 }
 .top {
@@ -28,7 +28,6 @@ body {
   margin: 0 
 }
 .email {
-  color: #BFDBEC;
   text-decoration: none;
 }
 .table {
