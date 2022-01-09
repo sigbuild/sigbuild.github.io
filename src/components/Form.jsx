@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import Input from "./Input";
+import SpecialInput from "./SpecialInput";
+
 export default function Form (props){
 
     const [image, setImage] = useState("/images/primary_rgb.png");
@@ -15,7 +17,8 @@ export default function Form (props){
     const [email, setEmail] = useState("");
     const [button, setButton] = useState("Build");
     const [color, setColor] = useState("blue");
-    let data = [image, name, credentials, pronouns, title, college, department, address, location, phone, email, color];
+    let data = [image, name, credentials, pronouns, 
+        title, college, department, address, location, phone, email, color];
     
     function updateLogs(){
         props.addLog(data);
@@ -24,7 +27,9 @@ export default function Form (props){
     function handleImage(selection){
         setImage("/images/"+selection);
     };
-
+    // function handleUpload(upload){
+    //     setImage("/images/"+upload);
+    // }
     function handleColor(selection){
         setColor(selection);
     };
@@ -57,8 +62,9 @@ export default function Form (props){
     return (
     <div onKeyPress={event => handleKeypress(event)} onMouseMove={event => handleMouse(event)} className="form">
         <form onSubmit={event => handleSubmit(event)}>
-            <Input label="image" onUpdate={event => handleImage(event)} />
-            <Input label="color" onUpdate={event => handleColor(event)} />
+            {/* <SpecialInput label="upload" onUpdate={event => handleUpload(event)} /> */}
+            <SpecialInput label="image" onUpdate={event => handleImage(event)} />
+            <SpecialInput label="color" onUpdate={event => handleColor(event)} />
             <Input label="name" onUpdate={event => setName(event)} example="e.g. Zachary Neill" />
             <Input label="credentials" onUpdate={event => setCredentials(event)} example="e.g. Ph.D" />
             <Input label="title" onUpdate={event => setTitle(event)} example="e.g. Director" />
