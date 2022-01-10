@@ -7,7 +7,6 @@ export default function App() {
   function logData(log){
     setData(log);
   };
-
   return (
     <Container className="App">
       <Paper className="paper" variant="outlined">

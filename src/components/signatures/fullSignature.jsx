@@ -31,7 +31,7 @@ export default function FullSignature (props){
     };
 
     return ( 
-        <CardContent>
+        <CardContent className="full-signature">
             <table className="signature">
                 <tbody>
                     <tr style={{color: color}}>

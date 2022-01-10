@@ -12,7 +12,7 @@ export default function simpleSignature (props){
     };
 
     return ( 
-        <CardContent>
+        <CardContent className="simple-signature">
             <p className="signature" style={{color: color}}>
                 <img className="image" 
                 src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/"+image} alt="college-img" nosend="1" />
