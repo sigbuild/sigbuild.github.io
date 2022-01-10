@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@material-ui/core";
+import { CardContent } from "@material-ui/core";
 import React from "react";
 
 export default function FullSignature (props){

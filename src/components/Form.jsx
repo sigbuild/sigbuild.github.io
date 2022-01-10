@@ -17,6 +17,7 @@ export default function Form (props){
     const [email, setEmail] = useState("");
     const [button, setButton] = useState("Build");
     const [color, setColor] = useState("#005A8B");
+    
     let data = [image, name, credentials, pronouns, 
         title, college, department, address, location, phone, email, color];
     
@@ -59,7 +60,7 @@ export default function Form (props){
     };
     return (
     <Box onKeyPress={event => handleKeypress(event)} onMouseMove={event => handleMouse(event)}>
-        <Box className="form inputs">
+        <Box className="form" sx={{ gap: 12 }}>
             <Input label="name" onUpdate={event => setName(event)} example="e.g. Zachary Neill" />
             <Input label="credentials" onUpdate={event => setCredentials(event)} example="e.g. Ph.D" />
             <Input label="title" onUpdate={event => setTitle(event)} example="e.g. Director" />
@@ -71,12 +72,12 @@ export default function Form (props){
             <Input label="phone" onUpdate={event => setPhone(event)} example="e.g. 859-985-3369" />
             <Input label="email" onUpdate={event => setEmail(event)} example="e.g. neillz@berea.edu" />
         </Box>
-        <Box className="form buttons">
-            <Button variant="contained" onClick={handlePrefill}>Pre-fill with Berea College Values</Button>
-            <Button variant="contained" onClick={handleSubmit}>{button}</Button>
-            <SpecialInput label="image" value={image} onUpdate={event => handleImage(event)} />
+        <Box className="form" sx={{ gap: 12 }}>
+            <Button className="btn-field" variant="contained" onClick={handlePrefill}>Pre-fill with Berea College Values</Button>
+            <Button className="btn-field" variant="contained" onClick={handleSubmit}>{button}</Button>
+            <SpecialInput className="btn-field" label="image" value={image} onUpdate={event => handleImage(event)} />
             {/* <SpecialInput label="upload" onUpdate={event => handleUpload(event)} /> */}
-            <SpecialInput label="color" value={color} onUpdate={event => handleColor(event)} />
+            <SpecialInput className="btn-field" label="color" value={color} onUpdate={event => handleColor(event)} />
         </Box>
     </Box>
     )

@@ -1,17 +1,17 @@
 import React from "react";
 import SimpleSignature from "./signatures/simpleSignature";
 import FullSignature from "./signatures/fullSignature";
-import { Card } from "@material-ui/core";
+import { Box, Card } from "@material-ui/core";
 
 export default function Table (props){
     return (
-        <div className="table">
+        <Box className="table">
             <Card>
                 <SimpleSignature data={props.data}/> 
             </Card>
-            <Card className="card">
+            <Card>
                 <FullSignature data={props.data} />
             </Card>
-        </div>
+        </Box>
     );
 };
