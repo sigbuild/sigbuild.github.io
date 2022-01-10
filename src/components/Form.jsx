@@ -73,11 +73,11 @@ export default function Form (props){
             <Input label="email" onUpdate={event => setEmail(event)} example="e.g. neillz@berea.edu" />
         </Box>
         <Box className="form" sx={{ gap: 12 }}>
-            <Button className="btn-field" variant="contained" onClick={handlePrefill}>Pre-fill with Berea College Values</Button>
-            <Button className="btn-field" variant="contained" onClick={handleSubmit}>{button}</Button>
-            <SpecialInput className="btn-field" label="image" value={image} onUpdate={event => handleImage(event)} />
+            <Button variant="contained" onClick={handlePrefill}>Pre-fill with Berea College Values</Button>
+            <Button style={{backgroundColor:"#005A8B", color:"white"}} variant="contained" onClick={handleSubmit}>{button}</Button>
+            <SpecialInput label="image" value={image} onUpdate={event => handleImage(event)} />
             {/* <SpecialInput label="upload" onUpdate={event => handleUpload(event)} /> */}
-            <SpecialInput className="btn-field" label="color" value={color} onUpdate={event => handleColor(event)} />
+            <SpecialInput label="color" value={color} onUpdate={event => handleColor(event)} />
         </Box>
     </Box>
     )
