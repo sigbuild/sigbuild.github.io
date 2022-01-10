@@ -3,12 +3,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.paper {
+  margin: 1rem;
+  padding: 2rem;
+}
 .border {
   border-left: solid 1pt;
   padding-left: 8pt;
 }
 .signature {
   font-size: 11pt;
+  padding: 2rem;
+
 }
 .image {
   max-inline-size: 110pt;
@@ -23,15 +29,19 @@ body {
 }
 .name {
   font-size: 18pt;
-  margin: 0 
 }
 .email {
   text-decoration: none;
 }
 .table {
   border-collapse: collapse;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .form {
   margin-bottom: 3rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 };

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import './App.css';
 import Table from "./components/Table";
 import Form from "./components/Form";
-import {Container} from "@material-ui/core";
+import {Container, Paper} from "@material-ui/core";
 export default function App() {
   const [data, setData] = useState([]);
   function logData(log){
@@ -10,9 +10,11 @@ export default function App() {
   };
 
   return (
-    <Container fixed className="App">
-      <Form addLog={logData} />
-      <Table data={data} />
+    <Container className="App">
+      <Paper className="paper" variant="outlined">
+        <Form addLog={logData} />
+        <Table data={data} />
+      </Paper>
     </Container>
   );
 };
