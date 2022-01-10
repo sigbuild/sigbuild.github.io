@@ -5,16 +5,16 @@ export default function FullSignature (props){
     let details = [title, college, department, address, location, phone];
     let needsPadding = false;
     switch(image) {
-        case "/images/ribbon.png":
+        case "ribbon.png":
             needsPadding = true;
             break;
-        case "/images/isns_blue.png":
+        case "isns_blue.png":
             needsPadding = true;
             break;
-        case "/images/isns_black.png":
+        case "isns_black.png":
             needsPadding = true;
             break;
-        case "/images/isns_white.png":
+        case "isns_white.png":
             needsPadding = true;
             break;
         default:
@@ -28,7 +28,8 @@ export default function FullSignature (props){
             <tbody>
                 <tr style={{color: color}}>
                     <td className="top">
-                        <img className={needsPadding ? "image border-padding": "image"} src={image} alt="college-img" nosend="1" />
+                        <img className={needsPadding ? "image border-padding": "image"} 
+                        src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/"+image} alt="college-img" nosend="1" />
                     </td>
                     <td className="border">
                         <table>

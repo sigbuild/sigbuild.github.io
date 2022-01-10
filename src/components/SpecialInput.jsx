@@ -11,13 +11,13 @@ export default function Input (props){
 	// };
 	// const handleSubmission = () => {
 	// };
-
     return (
     <div>
         { props.label==="image" &&
             <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <InputLabel id="image-select-label">Image</InputLabel>
                 <Select 
+                    value={props.value}
                     labelId="image-select-label"
                     label="Select Image"
                     onChange={event => props.onUpdate(event.target.value)}>

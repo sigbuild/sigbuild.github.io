@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import Input from "./Input";
 import SpecialInput from "./SpecialInput";
-import {Button} from "@material-ui/core";
+import {Button, Box} from "@material-ui/core";
 export default function Form (props){
 
-    const [image, setImage] = useState("/images/primary_rgb.png");
+    const [image, setImage] = useState("primary_rgb.png");
     const [name, setName] = useState("");
     const [credentials, setCredentials] = useState("");
     const [pronouns, setPronouns] = useState("");
@@ -25,10 +25,10 @@ export default function Form (props){
     };
 
     function handleImage(selection){
-        setImage("/images/"+selection);
+        setImage(selection);
     };
     // function handleUpload(upload){
-    //     setImage("/images/"+upload);
+    //     setImage(upload);
     // }
     function handleColor(selection){
         setColor(selection);
@@ -52,28 +52,34 @@ export default function Form (props){
     };
 
     function handlePrefill(){
-        setImage("/images/primary_rgb.png");
+        setImage("primary_rgb.png");
         setCollege("Berea College");
         setLocation("Berea, KY");
         updateLogs();
     };
     return (
-    <div onKeyPress={event => handleKeypress(event)} onMouseMove={event => handleMouse(event)} className="form">
-            {/* <SpecialInput label="upload" onUpdate={event => handleUpload(event)} /> */}
+    <Box onKeyPress={event => handleKeypress(event)} onMouseMove={event => handleMouse(event)}>
+        <Box className="form">
             <SpecialInput label="image" value={image} onUpdate={event => handleImage(event)} />
+            {/* <SpecialInput label="upload" onUpdate={event => handleUpload(event)} /> */}
             <SpecialInput label="color" value={color} onUpdate={event => handleColor(event)} />
             <Input label="name" onUpdate={event => setName(event)} example="e.g. Zachary Neill" />
             <Input label="credentials" onUpdate={event => setCredentials(event)} example="e.g. Ph.D" />
             <Input label="title" onUpdate={event => setTitle(event)} example="e.g. Director" />
             <Input label="pronouns" onUpdate={event => setPronouns(event)} example="e.g. He/him" />
+        </Box>
+        <Box className="form">
             <Input label="college" value={college} onUpdate={event => setCollege(event)} example="e.g. Berea College" />
             <Input label="department" onUpdate={event => setDepartment(event)} example="e.g. Department of Computer Science" />
             <Input label="address" onUpdate={event => setAddress(event)} example="e.g. 101 Chestnut St. or Edwards Building" />
             <Input label="location" value={location} onUpdate={event => setLocation(event)} example="e.g. Berea, KY or Room 101" />
             <Input label="phone" onUpdate={event => setPhone(event)} example="e.g. 859-985-3369" />
             <Input label="email" onUpdate={event => setEmail(event)} example="e.g. neillz@berea.edu" />
+        </Box>
+        <Box className="form">
             <Button variant="contained" size="large" onClick={handlePrefill}>Pre-fill with Berea College Values</Button>
             <Button variant="contained" size="large" onClick={handleSubmit}>{button}</Button>
-    </div>
+        </Box>
+    </Box>
     )
 }

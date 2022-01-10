@@ -1,20 +1,4 @@
 body {
-  font-size: 14px; 
-  line-height: 18px;
+  line-height: 14pt;
   color: initial;
-};
-
-.signature {
-  font-size: 14px; 
-  line-height: 18px; 
-  font-family: georgia, times, serif;
-};
-
-.sigImage {
-  border: 0;
-  width: 100px; 
-  height:71px;
-};
-.name {
-  font-size: 1.6em;
 };

@@ -6,7 +6,8 @@ export default function simpleSignature (props){
     return ( 
     <div>
         <p className="signature" style={{color: color}}>
-            <img className="image" src={image} alt="college-img" nosend="1" />
+            <img className="image" 
+            src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/"+image} alt="college-img" nosend="1" />
             <br />
             <span className="name">{name} 
                 {credentials && <span>, {credentials} </span>}

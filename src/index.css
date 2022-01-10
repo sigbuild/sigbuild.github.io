@@ -11,8 +11,7 @@ body {
   font-size: 11pt;
 }
 .image {
-  max-width: 110pt;
-  max-height: 110pt;
+  max-inline-size: 110pt;
   margin-right: 2pt;
 }
 .border-padding {
@@ -34,4 +33,5 @@ body {
 }
 .form {
   margin-bottom: 3rem;
+  display: flex;
 };

@@ -1,9 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import {TextField, Typography} from "@material-ui/core";
 export default function Input (props){
-    const [input, setInput] = useState("");
     function handleChange(event){
-        setInput(event.target.value);
         props.onUpdate(event.target.value);
     };
     return (
