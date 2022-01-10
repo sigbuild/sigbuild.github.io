@@ -1,39 +1,35 @@
-import { AppBar, Box, CssBaseline, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography } from "@material-ui/core";
 import React from "react";
+import { Box, CssBaseline, Divider, Drawer, Toolbar, Typography } from "@material-ui/core";
 
-export default function PermanentDrawerLeft() {
+export default function Sidebar() {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);    
+
     return (
-      <Box sx={{ display: 'flex' }}>
+        <Box>
+        {width > 1520 ? 
+
+        <Box sx={{ display: "flex"}} style={{flexWrap:"wrap" }} >
         <CssBaseline />
-        <AppBar style={{zIndex: 1200, backgroundColor:"#005A8B" }}
-          sx={{ width: 280}}
-        >
-          <Toolbar>
-            <Typography variant="h6" noWrap component="div">
-              {/* Title here if needed */}
-            </Typography>
-          </Toolbar>
-        </AppBar>
         <Drawer style={{zIndex: 1100}}
-          sx={{ 
-            width: 280,
-            flexShrink: 0,
-            '& .MuiDrawer-paper': {
-              width: 280,
-              boxSizing: 'border-box',
-            },
-          }}
           variant="permanent"
-          anchor="left"
-        >
-          <Toolbar />
-          <Divider />
-          <Divider />
-        </Drawer>
-        <Box
-          component="main"
-          sx={{ flexGrow: 1, p: 2 }}>
-        </Box>
+          anchor="left">
+            <Toolbar />
+            <Typography variant="h3">
+            Signature
+            </Typography>
+            <Typography variant="h3">
+            Builder
+            </Typography>
+            <Divider />
+        </Drawer> 
       </Box>
+        : null}
+        
+        </Box>
     );
   }
