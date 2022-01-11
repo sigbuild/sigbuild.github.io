@@ -9,23 +9,23 @@ body {
 }
 .sidebar-typography {
     width: 140pt;
-    overflow: auto;
-    margin: 0.5rem;
     display: flex;
     flex-direction: column;
+    overflow: auto;
+    margin: 0.5rem;
 }
 .sidebar-buttons {
     width: 140pt;
-    bottom: 1.5rem;
     display: flex;
-    position: absolute;
     flex-direction: column;
+    bottom: 1.5rem;
+    position: absolute;
 }
 .sidebar-mobile {
-    overflow: auto;
     display: flex;
     flex-direction: column;
+    overflow: auto;
+    margin-left: 0.1rem;
     bottom: 1.5rem;
     position: absolute;
-    margin-left: 0.1rem;
 }
