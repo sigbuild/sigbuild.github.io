@@ -1,35 +1,70 @@
-import React from "react";
-import { Box, CssBaseline, Divider, Drawer, Toolbar, Typography } from "@material-ui/core";
+import React, {useState} from "react";
+import { Button, Box, CssBaseline, Divider, Drawer, Toolbar, Typography } from "@material-ui/core";
+import { GitHub } from "@material-ui/icons";
+import Instructions from "./Instructions";
 
-export default function Sidebar() {
-    const [width, setWidth] = React.useState(window.innerWidth);
-    React.useEffect(() => {
-        const handleWindowResize = () => setWidth(window.innerWidth)
-        window.addEventListener("resize", handleWindowResize);
-        return () => window.removeEventListener("resize", handleWindowResize);
-    }, []);    
+export default function Sidebar(props) {
+  const [opened, setOpened] = useState(false);
+    function toggleDrawer(){
+      setOpened(true);
+    }
+    function handleClose(){
+      setOpened(false);
+    }
 
     return (
-        <Box>
-        {width > 1520 ? 
-
-        <Box sx={{ display: "flex"}} style={{flexWrap:"wrap" }} >
-        <CssBaseline />
-        <Drawer style={{zIndex: 1100}}
+      <Box>
+      <Instructions close={handleClose} opened={opened} />
+      <CssBaseline />
+      {props.size==="larger" ? 
+        <Box sx={{ display: "flex"}}>
+        <Drawer sx={{boxSizing: 'border-box'}} style={{zIndex: 1100}}
           variant="permanent"
           anchor="left">
             <Toolbar />
-            <Typography variant="h3">
-            Signature
-            </Typography>
-            <Typography variant="h3">
-            Builder
-            </Typography>
-            <Divider />
+            <Box className="sidebar-typography">
+              <Typography variant="h4" style={{textAlign:"center", fontWeight:600}}>
+              Signature Builder
+              </Typography>
+              <Divider style={{marginTop:10}} />
+              <Divider style={{marginBottom:10}} />
+
+              <Typography paragraph>
+                Build a professional signature to include at the end of your emails! 
+              </Typography>
+              <Divider style={{marginTop:10}} />
+              <Divider style={{marginBottom:20}} />
+              <Typography paragraph>
+                Click <Button onClick={toggleDrawer}>here</Button> for instructions 
+                for Outlook and Gmail. 
+              </Typography>
+            </Box>
+            <Box className="sidebar-buttons">
+              <Button href="https://my.berea.edu" target="_blank">Go to myBerea</Button>
+              <Button href="https://moodle.berea.edu" target="_blank">Go to Moodle</Button>
+              <Button href="https://github.com/zachneill/signature-builder" target="_blank">Go to Source Code</Button>
+            </Box>
         </Drawer> 
       </Box>
-        : null}
-        
+    : 
+      <Box>
+      <CssBaseline />
+        <Box sx={{ display: "flex"}} style={{flexWrap:"wrap"}}>
+        <Drawer sx={{overflow:"auto", boxSizing: 'border-box'}} style={{zIndex: 1100}}
+          variant="permanent"
+          anchor="left">
+            <Toolbar />
+            <Box style={{width:85}}/>
+            <Box className="sidebar-mobile">
+              <Button onClick={toggleDrawer}>How-To</Button>
+              <Button href="https://my.berea.edu" target="_blank">myBerea</Button>
+              <Button href="https://moodle.berea.edu" target="_blank">Moodle</Button>
+              <Button href="https://github.com/zachneill/signature-builder" target="_blank" color="inherit"><GitHub /></Button>
+            </Box>
+          </Drawer> 
         </Box>
-    );
-  }
+      </Box>
+    }
+    </Box>
+  );
+}

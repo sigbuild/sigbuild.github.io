@@ -1,14 +1,14 @@
 import React from "react";
 import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@material-ui/core";
 
-export default function TopBar (){
+export default function TopBar (props){
     return (
     <Box>
         <CssBaseline />
-        <AppBar style={{zIndex: 1200, backgroundColor:"#005A8B" }}>
+        <AppBar position="fixed" style={{zIndex: 1200, backgroundColor:"#005A8B" }}>
             <Toolbar>
                 <Typography variant="h6" noWrap component="div">
-                {/* Title here if needed */}
+                {props.size==="smaller"? "BC Signature Builder" : null}
                 </Typography>
             </Toolbar>
         </AppBar>
