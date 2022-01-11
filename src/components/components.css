@@ -1,0 +1,38 @@
+.border {
+    border-left: solid 1pt;
+    padding-left: 8pt;
+}
+.signature {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 11pt;
+    padding: 1rem;
+}
+.image {
+    max-inline-size: 110pt;
+    margin-right: 2pt;
+}
+.border-padding {
+    padding-right: 9pt;
+}
+.top {
+    vertical-align: top;
+    margin-top: 0;
+}
+.name {
+    font-size: 18pt;
+}
+.email {
+    text-decoration: none;
+}
+.table {
+    border-collapse: collapse;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.form {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+};

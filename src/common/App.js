@@ -1,3 +1,5 @@
+import './common.css';
+import '../components/components.css';
 import React, {useState} from "react";
 import Table from "../components/Table";
 import Form from "../components/Form";

@@ -23,6 +23,8 @@ The build is minified and the filenames include the hashes.\
 
 ## Dev TODO 
 - Make signature resizer
-- Finish instructions for creating a signature
 - Change icons
+- Change clipboard CDN to package
+- Upgrade from material-ui/core to @mui/material
+- Upgrade from material-ui/icons to @mui/icons-material
 - Make static production build

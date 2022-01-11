@@ -1,0 +1,31 @@
+body {
+    font-family: 'Georgia', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}  
+.paper {
+    margin: 1rem;
+    padding: 2rem;
+}
+.sidebar-typography {
+    width: 140pt;
+    overflow: auto;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-buttons {
+    width: 140pt;
+    bottom: 1.5rem;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
+.sidebar-mobile {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    bottom: 1.5rem;
+    position: absolute;
+    margin-left: 0.1rem;
+}

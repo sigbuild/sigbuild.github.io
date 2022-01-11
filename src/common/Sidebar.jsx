@@ -27,7 +27,7 @@ export default function Sidebar(props) {
               Signature Builder
               </Typography>
               <Divider style={{marginTop:10}} />
-              <Divider style={{marginBottom:10}} />
+              <Divider style={{marginBottom:20}} />
 
               <Typography paragraph>
                 Build a professional signature to include at the end of your emails! 
@@ -35,7 +35,7 @@ export default function Sidebar(props) {
               <Divider style={{marginTop:10}} />
               <Divider style={{marginBottom:20}} />
               <Typography paragraph>
-                Click <Button onClick={toggleDrawer}>here</Button> for instructions 
+                Click <Button variant="outlined" style={{color:"#005A8B"}} size="small" onClick={toggleDrawer}>here</Button> for instructions 
                 for Outlook and Gmail. 
               </Typography>
             </Box>
