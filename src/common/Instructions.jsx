@@ -25,7 +25,7 @@ export default function Instructions(props) {
                     Search <span style={{fontWeight: 'bold', margin:4}}>"signature"</span> and paste your signature into the field 
                 </ListItem>
                 <ListItem> <Looks3 fontSize="large" />
-                    You may set it to be visible by default. Hit save.
+                    You may set it to be visible by default. Hit save
                 </ListItem>
                 <ListItem> <Looks4 fontSize="large" />
                     If not default, on emails, click the <MoreHoriz /> dots and 
@@ -44,7 +44,7 @@ export default function Instructions(props) {
                     Select "See all settings" and scroll to <span style={{fontWeight: 'bold', marginLeft:4}}>Signature</span>
                 </ListItem>
                 <ListItem> <Looks3 fontSize="large" />
-                    Paste your new signature into the text field.
+                    Paste your new signature into the text field
                 </ListItem>
                 <ListItem> <Looks4 fontSize="large" />
                     You may set it to be visible by default. Hit <span style={{fontWeight: 'bold', marginLeft:4}}>Save Changes</span>
