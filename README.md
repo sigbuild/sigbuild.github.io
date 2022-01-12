@@ -22,13 +22,13 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 
 ## Dev TODO 
-- Add image upload functionality
-- Updates realtime, not 1 character late
-- Contact info on right side of screen
 - Sidebar more content-aware on mobile
+- Add image upload functionality
+- Contact info on right side of screen
 - Cards are their own height
-- Updates on autofill
-- Fix Whitespace text nodes error 
 - Sizes lock aspect ratio checkbox
+- Updates realtime, not 1 character late
+- Fix Whitespace text nodes error 
+- Updates on autofill
 - Add SASS instead of CSS
 - Add yarn instead of npm
