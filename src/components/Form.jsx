@@ -49,7 +49,6 @@ export default function Form (props){
     function handleImageSize(selection){
         setImageSize(selection);
     };
-
     // function handleMouse(){
     //     updateLogs();
     // };
@@ -65,6 +64,9 @@ export default function Form (props){
     function handleSubmit(){
         setButton("Built!");
         updateLogs();
+        setTimeout(()=>{
+            setButton("Build");
+        }, 1200);
     };
 
     function handlePrefill(){
@@ -92,9 +94,9 @@ export default function Form (props){
             <SpecialInput label="image" value={image} onUpdate={event => handleImage(event)} />
             <SpecialInput label="color" value={color} onUpdate={event => handleColor(event)} />
             
-            <SizeSlider label="name" value={nameSize} onUpdate={event => handleNameSize(event)} />
-            <SizeSlider label="detail" value={detailSize} onUpdate={event => handleDetailSize(event)} />
-            <SizeSlider label="image" value={imageSize} onUpdate={event => handleImageSize(event)} />
+            <SizeSlider label="name" onSlide={handleKeypress} value={nameSize} onUpdate={event => handleNameSize(event)} />
+            <SizeSlider label="detail" onSlide={handleKeypress} value={detailSize} onUpdate={event => handleDetailSize(event)} />
+            <SizeSlider label="image" onSlide={handleKeypress} value={imageSize} onUpdate={event => handleImageSize(event)} />
             <Grid item>
                 <Button size="large" color="inherit" variant="contained" onClick={handlePrefill}>Autofill with Berea Values</Button>
             </Grid>
