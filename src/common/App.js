@@ -1,7 +1,7 @@
 import './common.css';
 import '../components/components.css';
 import React, {useState} from "react";
-import Table from "../components/Table";
+import CardArea from "../components/CardArea";
 import Form from "../components/Form";
 import Sidebar from "./Sidebar";
 import TopBar from "./TopBar";
@@ -21,7 +21,7 @@ export default function App() {
         {IsViewportBig() ? <Sidebar size="larger" /> : <Sidebar size="smaller" /> }
 
         <Form addLog={logData} />
-        <Table data={data} />
+        <CardArea data={data} />
       </Paper>
     </Container>
   );

@@ -39,7 +39,7 @@ export default function Sidebar(props) {
                 for Outlook and Gmail. 
               </Typography>
             </Box>
-            <Box className="sidebar-buttons">
+            <Box className="sidebar-buttons" style={{color:"#005A8B"}}>
               <Button href="https://my.berea.edu" target="_blank">Go to myBerea</Button>
               <Button href="https://moodle.berea.edu" target="_blank">Go to Moodle</Button>
               <Button href="https://github.com/zachneill/signature-builder" target="_blank">Go to Source Code</Button>

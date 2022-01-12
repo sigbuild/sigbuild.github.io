@@ -72,7 +72,7 @@ export default function Form (props){
         </Grid>
         <Grid className="form" container columnSpacing={2}>
             <Grid item>
-                <Button size="large" variant="contained" onClick={handlePrefill}>Autofill with Berea Values</Button>
+                <Button size="large" color="inherit" variant="contained" onClick={handlePrefill}>Autofill with Berea Values</Button>
             </Grid>
             <Grid item>
                 <Button size="large" variant="contained" style={{backgroundColor:"#005A8B", color:"white"}} onClick={handleSubmit}>{button}</Button>

@@ -23,9 +23,9 @@ The build is minified and the filenames include the hashes.\
 
 ## Dev TODO 
 - Make signature resizer
-- Upgrade from material-ui/core to @mui/material
-- Upgrade from material-ui/icons to @mui/icons-material
 - Make static production build
 - Improve build button layout
+- Sidebar is more content-aware
+- Cards are their own height
 - Fix Whitespace text nodes error
 - Add image upload functionality

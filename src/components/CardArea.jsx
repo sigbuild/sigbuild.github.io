@@ -4,11 +4,11 @@ import FullSignature from "./signatures/fullSignature";
 import {Box, Card, Button} from "@mui/material";
 import ClipboardJS from "clipboard";
 
-export default function Table (props){
+export default function CardArea (props){
     new ClipboardJS('.clipboard');
     
     return (
-        <Box className="table">
+        <Box className="card-area">
             <Card>
                 <Button data-clipboard-target=".simple-signature" className="clipboard">
                     Copy
