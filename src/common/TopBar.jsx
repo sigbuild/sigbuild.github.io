@@ -2,6 +2,7 @@ import React from "react";
 import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material";
 
 export default function TopBar (props){
+    
     return (
     <Box>
         <CssBaseline />

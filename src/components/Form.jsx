@@ -50,11 +50,11 @@ export default function Form (props){
         setImageSize(selection);
     };
 
-    function handleMouse(event){
-        updateLogs();
-    };
+    // function handleMouse(){
+    //     updateLogs();
+    // };
 
-    function handleKeypress(event){
+    function handleKeypress(){
         updateLogs();
         setButton("Quick Syncing");
         setTimeout(()=>{
@@ -62,7 +62,7 @@ export default function Form (props){
         }, 500);
     };
 
-    function handleSubmit(event){
+    function handleSubmit(){
         setButton("Built!");
         updateLogs();
     };
@@ -73,23 +73,25 @@ export default function Form (props){
         setLocation("Berea, KY");
         updateLogs();
     };
+    
     return (
-    <Box onKeyPress={event => handleKeypress(event)} onMouseMove={event => handleMouse(event)}>
+    <Box onKeyPress={handleKeypress} /* onMouseMove={handleMouse}*/>
         <Grid className="form" container columnSpacing={1} rowSpacing={1}>
-            <Input label="name" onUpdate={event => setName(event)} example="e.g. Zachary Neill" />
-            <Input label="credentials" onUpdate={event => setCredentials(event)} example="e.g. Ph.D" />
-            <Input label="title" onUpdate={event => setTitle(event)} example="e.g. Director" />
-            <Input label="pronouns" onUpdate={event => setPronouns(event)} example="e.g. He/him" />
-            <Input label="college" value={college} onUpdate={event => setCollege(event)} example="e.g. Berea College" />
-            <Input label="department" onUpdate={event => setDepartment(event)} example="e.g. Department of Computer Science" />
-            <Input label="address" onUpdate={event => setAddress(event)} example="e.g. 101 Chestnut St. or Edwards Building" />
-            <Input label="location" value={location} onUpdate={event => setLocation(event)} example="e.g. Berea, KY or Room 101" />
-            <Input label="phone" onUpdate={event => setPhone(event)} example="e.g. 859-985-3369" />
-            <Input label="email" onUpdate={event => setEmail(event)} example="e.g. neillz@berea.edu" />
+            <Input label="name" onUpdate={setName} example="e.g. Zachary Neill" />
+            <Input label="credentials" onUpdate={setCredentials} example="e.g. Ph.D" />
+            <Input label="title" onUpdate={setTitle} example="e.g. Director" />
+            <Input label="pronouns" onUpdate={setPronouns} example="e.g. He/him" />
+            <Input label="college" value={college} onUpdate={setCollege} example="e.g. Berea College" />
+            <Input label="department" onUpdate={setDepartment} example="e.g. Department of Computer Science" />
+            <Input label="address" onUpdate={setAddress} example="e.g. 101 Chestnut St. or Edwards Building" />
+            <Input label="location" value={location} onUpdate={setLocation} example="e.g. Berea, KY or Room 101" />
+            <Input label="phone" onUpdate={setPhone} example="e.g. 859-985-3369" />
+            <Input label="email" onUpdate={setEmail} example="e.g. neillz@berea.edu" />
         </Grid>
         <Grid className="form" container columnSpacing={2} rowSpacing={2}>
             <SpecialInput label="image" value={image} onUpdate={event => handleImage(event)} />
             <SpecialInput label="color" value={color} onUpdate={event => handleColor(event)} />
+            
             <SizeSlider label="name" value={nameSize} onUpdate={event => handleNameSize(event)} />
             <SizeSlider label="detail" value={detailSize} onUpdate={event => handleDetailSize(event)} />
             <SizeSlider label="image" value={imageSize} onUpdate={event => handleImageSize(event)} />

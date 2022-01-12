@@ -22,10 +22,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 
 ## Dev TODO 
-- Make signature resizer
-- Prevent image selector shaking
-- Make static production build
-- Sidebar is more content-aware
+- Updates realtime, not 1 character late
+- Sidebar content-aware on mobile
 - Cards are their own height
-- Fix Whitespace text nodes error
+- Updates on autofill
 - Add image upload functionality
+- Fix Whitespace text nodes error 
+- Sizes lock aspect ratio checkbox
+- Make static production build
