@@ -5,6 +5,7 @@ export default function Input (props){
     function handleChange(event){
         props.onUpdate(event.target.value);
     };
+    
     return (
     <Grid item>
         <Typography style={{textTransform: 'capitalize'}} variant="body1" >{props.label}</Typography>

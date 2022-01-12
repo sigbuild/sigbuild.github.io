@@ -23,6 +23,7 @@ The build is minified and the filenames include the hashes.\
 
 ## Dev TODO 
 - Make signature resizer
+- Prevent image selector shaking
 - Make static production build
 - Sidebar is more content-aware
 - Cards are their own height

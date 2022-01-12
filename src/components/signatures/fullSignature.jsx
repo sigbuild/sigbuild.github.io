@@ -2,9 +2,15 @@ import React from "react";
 import { CardContent } from "@mui/material";
 
 export default function FullSignature (props){
-    let [image, name, credentials, pronouns, title, college, department, address, location, phone, email, color] = props.data;
+    let [image, name, credentials, pronouns, title, college, department, address, 
+        location, phone, email, color, nameSize, detailSize, imageSize] = props.data;
     let details = [title, college, department, address, location, phone];
     let needsPadding = false;
+    !nameSize ? nameSize = 18 : nameSize *= 4/3;
+    !detailSize ? detailSize = 11 : detailSize *= 4/3;
+    if (!imageSize){
+        imageSize = 110;
+    } 
     if (!image){
         image="primary_rgb.png";
     };
@@ -31,12 +37,12 @@ export default function FullSignature (props){
     };
 
     return ( 
-        <CardContent className="full-signature">
+        <CardContent className="full-signature" style={{fontSize: detailSize}}>
             <table className="signature">
                 <tbody>
                     <tr style={{color: color}}>
                         <td className="top">
-                            <img className={needsPadding ? "image border-padding": "image"} 
+                            <img className={needsPadding ? "image border-padding": "image"} style={{maxInlineSize: imageSize}}
                             src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/signatures/"+image} alt="college-img" nosend="1" />
                         </td>
                         <td className="border">
@@ -44,7 +50,7 @@ export default function FullSignature (props){
                                 <tbody style={{ color: {color} }}>
                                     <tr>
                                         <td>
-                                            <span className="name">{name} 
+                                            <span style={{fontSize:nameSize}}>{name} 
                                                 {credentials && <span>, {credentials}</span>}
                                             </span>
                                         </td>

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Input from "./Input";
 import SpecialInput from "./SpecialInput";
 import {Button, Box, Grid} from "@mui/material";
-import FontSlider from "./FontSlider";
+import SizeSlider from "./SizeSlider";
 
 export default function Form (props){
 
@@ -19,10 +19,12 @@ export default function Form (props){
     const [email, setEmail] = useState("");
     const [button, setButton] = useState("Build");
     const [color, setColor] = useState("#005A8B");
-    const [font, setFont] = useState(18);
+    const [nameSize, setNameSize] = useState(18);
+    const [detailSize, setDetailSize] = useState(11);
+    const [imageSize, setImageSize] = useState(110);
     
-    let data = [image, name, credentials, pronouns, 
-        title, college, department, address, location, phone, email, color];
+    let data = [image, name, credentials, pronouns, title, college, department, 
+        address, location, phone, email, color, nameSize, detailSize, imageSize];
     
     function updateLogs(){
         props.addLog(data);
@@ -36,8 +38,16 @@ export default function Form (props){
         setColor(selection);
     };
 
-    function handleFont(selection){
-        setFont(selection);
+    function handleNameSize(selection){
+        setNameSize(selection);
+    };
+
+    function handleDetailSize(selection){
+        setDetailSize(selection);
+    };
+
+    function handleImageSize(selection){
+        setImageSize(selection);
     };
 
     function handleMouse(event){
@@ -80,7 +90,9 @@ export default function Form (props){
         <Grid className="form" container columnSpacing={2} rowSpacing={2}>
             <SpecialInput label="image" value={image} onUpdate={event => handleImage(event)} />
             <SpecialInput label="color" value={color} onUpdate={event => handleColor(event)} />
-            <FontSlider value={font} onUpdate={event => handleFont(event)} />
+            <SizeSlider label="name" value={nameSize} onUpdate={event => handleNameSize(event)} />
+            <SizeSlider label="detail" value={detailSize} onUpdate={event => handleDetailSize(event)} />
+            <SizeSlider label="image" value={imageSize} onUpdate={event => handleImageSize(event)} />
             <Grid item>
                 <Button size="large" color="inherit" variant="contained" onClick={handlePrefill}>Autofill with Berea Values</Button>
             </Grid>

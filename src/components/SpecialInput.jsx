@@ -2,6 +2,7 @@ import React from "react";
 import {Grid, InputLabel, Select, MenuItem, FormControl} from "@mui/material";
 
 export default function Input (props){
+    
     return (
     <Grid item>
         { props.label==="image" &&

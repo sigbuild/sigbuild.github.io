@@ -2,8 +2,15 @@ import React from "react";
 import { CardContent } from "@mui/material";
 
 export default function simpleSignature (props){
-    let [image, name, credentials, , title, college, department, address, location, phone, email, color] = props.data;
+    let [image, name, credentials, , title, college, department, address, 
+        location, phone, email, color, nameSize, detailSize, imageSize] = props.data;
     let details = [title, college, department, address, location, phone];
+    !nameSize ? nameSize = 18 : nameSize *= 4/3;
+    !detailSize ? detailSize = 11 : detailSize *= 4/3;
+    if (!imageSize){
+        imageSize = 110;
+    } 
+
     if (!image){
         image="primary_rgb.png";
     };
@@ -13,11 +20,12 @@ export default function simpleSignature (props){
 
     return ( 
         <CardContent className="simple-signature">
-            <p className="signature" style={{color: color}}>
-                <img className="image" 
-                src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/signatures/"+image} alt="college-img" nosend="1" />
+            <p className="signature" style={{color: color, fontSize:detailSize}}>
+                <img className="image" style={{maxInlineSize:imageSize}}
+                src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/signatures/"+image} 
+                alt="college-img" nosend="1" />
                 <br />
-                <span className="name">{name} 
+                <span style={{fontSize:nameSize}}>{name} 
                     {credentials && <span>, {credentials} </span>}
                 </span>
                 <br />
