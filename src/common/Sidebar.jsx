@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import { Button, Box, CssBaseline, Divider, Drawer, Toolbar, Typography } from "@material-ui/core";
-import { GitHub } from "@material-ui/icons";
+import { Button, Box, CssBaseline, Divider, Drawer, Toolbar, Typography } from "@mui/material";
+import { GitHub } from "@mui/icons-material";
 import Instructions from "./Instructions";
 
 export default function Sidebar(props) {
@@ -23,7 +23,7 @@ export default function Sidebar(props) {
           anchor="left">
             <Toolbar />
             <Box className="sidebar-typography">
-              <Typography variant="h4" style={{textAlign:"center", fontWeight:600}}>
+              <Typography className="main-title" variant="h3" style={{textAlign:"center", fontFamily: 'League Spartan', fontWeight:600}}>
               Signature Builder
               </Typography>
               <Divider style={{marginTop:10}} />

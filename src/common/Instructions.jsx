@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Divider, Typography, Drawer, Button, List, ListItem } from "@material-ui/core";
-import { CloseRounded, LooksOne, LooksTwo, Looks3, Looks4, MoreHoriz, Looks5 } from "@material-ui/icons";
+import { Box, Divider, Typography, Drawer, Button, List, ListItem } from "@mui/material";
+import { CloseRounded, LooksOne, LooksTwo, Looks3, Looks4, MoreHoriz, Looks5 } from "@mui/icons-material";
 
 export default function Instructions(props) {
     function close(){

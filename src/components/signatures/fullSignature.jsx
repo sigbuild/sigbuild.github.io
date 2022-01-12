@@ -1,5 +1,5 @@
-import { CardContent } from "@material-ui/core";
 import React from "react";
+import { CardContent } from "@mui/material";
 
 export default function FullSignature (props){
     let [image, name, credentials, pronouns, title, college, department, address, location, phone, email, color] = props.data;
@@ -37,7 +37,7 @@ export default function FullSignature (props){
                     <tr style={{color: color}}>
                         <td className="top">
                             <img className={needsPadding ? "image border-padding": "image"} 
-                            src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/"+image} alt="college-img" nosend="1" />
+                            src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/signatures/"+image} alt="college-img" nosend="1" />
                         </td>
                         <td className="border">
                             <table>

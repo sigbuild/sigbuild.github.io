@@ -1,5 +1,5 @@
-import { CardContent } from "@material-ui/core";
 import React from "react";
+import { CardContent } from "@mui/material";
 
 export default function simpleSignature (props){
     let [image, name, credentials, , title, college, department, address, location, phone, email, color] = props.data;
@@ -15,7 +15,7 @@ export default function simpleSignature (props){
         <CardContent className="simple-signature">
             <p className="signature" style={{color: color}}>
                 <img className="image" 
-                src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/"+image} alt="college-img" nosend="1" />
+                src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/signatures/"+image} alt="college-img" nosend="1" />
                 <br />
                 <span className="name">{name} 
                     {credentials && <span>, {credentials} </span>}

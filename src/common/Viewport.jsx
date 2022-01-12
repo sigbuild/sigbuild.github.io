@@ -7,5 +7,5 @@ export default function Viewport() {
         window.addEventListener("resize", handleWindowResize);
         return () => window.removeEventListener("resize", handleWindowResize);
     }, []); 
-    return width > 1520 ? true : false
+    return width > 1500 ? true : false
 };

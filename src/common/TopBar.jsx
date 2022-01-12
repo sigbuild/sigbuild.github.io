@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material";
 
 export default function TopBar (props){
     return (

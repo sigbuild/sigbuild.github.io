@@ -6,7 +6,7 @@ import Form from "../components/Form";
 import Sidebar from "./Sidebar";
 import TopBar from "./TopBar";
 import IsViewportBig from "./Viewport";
-import {Container, Paper} from "@material-ui/core";
+import {Container, Paper} from "@mui/material";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -16,7 +16,7 @@ export default function App() {
   
   return (
     <Container className="App">
-      <Paper className="paper" variant="outlined">
+      <Paper elevation={2} className="paper" >
         {IsViewportBig() ? <TopBar size="larger" /> : <TopBar size="smaller" /> }
         {IsViewportBig() ? <Sidebar size="larger" /> : <Sidebar size="smaller" /> }
 

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Input from "./Input";
 import SpecialInput from "./SpecialInput";
-import {Button, Box} from "@material-ui/core";
+import {Button, Box, Grid} from "@mui/material";
 export default function Form (props){
 
     const [image, setImage] = useState("primary_rgb.png");
@@ -28,9 +28,7 @@ export default function Form (props){
     function handleImage(selection){
         setImage(selection);
     };
-    // function handleUpload(upload){
-    //     setImage(upload);
-    // }
+
     function handleColor(selection){
         setColor(selection);
     };
@@ -60,7 +58,7 @@ export default function Form (props){
     };
     return (
     <Box onKeyPress={event => handleKeypress(event)} onMouseMove={event => handleMouse(event)}>
-        <Box className="form" sx={{ gap: 12 }}>
+        <Grid className="form" container columnSpacing={1} rowSpacing={1}>
             <Input label="name" onUpdate={event => setName(event)} example="e.g. Zachary Neill" />
             <Input label="credentials" onUpdate={event => setCredentials(event)} example="e.g. Ph.D" />
             <Input label="title" onUpdate={event => setTitle(event)} example="e.g. Director" />
@@ -71,14 +69,17 @@ export default function Form (props){
             <Input label="location" value={location} onUpdate={event => setLocation(event)} example="e.g. Berea, KY or Room 101" />
             <Input label="phone" onUpdate={event => setPhone(event)} example="e.g. 859-985-3369" />
             <Input label="email" onUpdate={event => setEmail(event)} example="e.g. neillz@berea.edu" />
-        </Box>
-        <Box className="form" sx={{ gap: 12}}>
-            <Button variant="contained" onClick={handlePrefill}>Autofill with Berea Values</Button>
-            <Button style={{backgroundColor:"#005A8B", color:"white"}} variant="contained" onClick={handleSubmit}>{button}</Button>
+        </Grid>
+        <Grid className="form" container columnSpacing={2}>
+            <Grid item>
+                <Button size="large" variant="contained" onClick={handlePrefill}>Autofill with Berea Values</Button>
+            </Grid>
+            <Grid item>
+                <Button size="large" variant="contained" style={{backgroundColor:"#005A8B", color:"white"}} onClick={handleSubmit}>{button}</Button>
+            </Grid>
             <SpecialInput label="image" value={image} onUpdate={event => handleImage(event)} />
-            {/* <SpecialInput label="upload" onUpdate={event => handleUpload(event)} /> */}
             <SpecialInput label="color" value={color} onUpdate={event => handleColor(event)} />
-        </Box>
+        </Grid>
     </Box>
     )
 }

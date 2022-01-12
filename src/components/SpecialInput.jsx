@@ -1,21 +1,12 @@
 import React from "react";
-import {InputLabel, Select, MenuItem, FormControl} from "@material-ui/core";
+import {Grid, InputLabel, Select, MenuItem, FormControl} from "@mui/material";
 
 export default function Input (props){
-    // const [file, setFile] = useState("");
-    // const [picked, setPicked] = useState(false);
-
-    // const handleFile = (event) => {
-	// 	setFile(event.target.files[0]);
-	// 	setPicked(true);
-	// };
-	// const handleSubmission = () => {
-	// };
     return (
-    <div>
+    <Grid item>
         { props.label==="image" &&
             <FormControl sx={{ m: 1, minWidth: 120 }}>
-                <InputLabel id="image-select-label">Image</InputLabel>
+                <InputLabel id="image-select-label">Image Style</InputLabel>
                 <Select 
                     value={props.value}
                     labelId="image-select-label"
@@ -38,14 +29,6 @@ export default function Input (props){
                 </Select>
             </FormControl>
         }
-        {/* { props.label==="upload" && 
-            <div>
-            {file}
-                <label>Or, upload your own image: </label>
-                <input type="file" name="file" onChange={handleFile} />
-                <button onClick={handleSubmission}>Submit</button>
-            </div>
-        } */}
         { props.label==="color" && 
             <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <InputLabel id="color-select-label">Text Color</InputLabel>
@@ -59,6 +42,6 @@ export default function Input (props){
                 </Select>
             </FormControl>
         }
-    </div>
+    </Grid>
     )
 };

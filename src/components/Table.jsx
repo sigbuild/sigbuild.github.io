@@ -1,9 +1,12 @@
 import React from "react";
 import SimpleSignature from "./signatures/simpleSignature";
 import FullSignature from "./signatures/fullSignature";
-import { Box, Card, Button } from "@material-ui/core";
+import {Box, Card, Button} from "@mui/material";
+import ClipboardJS from "clipboard";
 
 export default function Table (props){
+    new ClipboardJS('.clipboard');
+    
     return (
         <Box className="table">
             <Card>
