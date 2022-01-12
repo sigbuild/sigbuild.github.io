@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import Input from "./Input";
 import SpecialInput from "./SpecialInput";
 import {Button, Box, Grid} from "@mui/material";
+import FontSlider from "./FontSlider";
+
 export default function Form (props){
 
     const [image, setImage] = useState("primary_rgb.png");
@@ -17,6 +19,7 @@ export default function Form (props){
     const [email, setEmail] = useState("");
     const [button, setButton] = useState("Build");
     const [color, setColor] = useState("#005A8B");
+    const [font, setFont] = useState(18);
     
     let data = [image, name, credentials, pronouns, 
         title, college, department, address, location, phone, email, color];
@@ -31,6 +34,10 @@ export default function Form (props){
 
     function handleColor(selection){
         setColor(selection);
+    };
+
+    function handleFont(selection){
+        setFont(selection);
     };
 
     function handleMouse(event){
@@ -70,15 +77,16 @@ export default function Form (props){
             <Input label="phone" onUpdate={event => setPhone(event)} example="e.g. 859-985-3369" />
             <Input label="email" onUpdate={event => setEmail(event)} example="e.g. neillz@berea.edu" />
         </Grid>
-        <Grid className="form" container columnSpacing={2}>
+        <Grid className="form" container columnSpacing={2} rowSpacing={2}>
+            <SpecialInput label="image" value={image} onUpdate={event => handleImage(event)} />
+            <SpecialInput label="color" value={color} onUpdate={event => handleColor(event)} />
+            <FontSlider value={font} onUpdate={event => handleFont(event)} />
             <Grid item>
                 <Button size="large" color="inherit" variant="contained" onClick={handlePrefill}>Autofill with Berea Values</Button>
             </Grid>
             <Grid item>
                 <Button size="large" variant="contained" style={{backgroundColor:"#005A8B", color:"white"}} onClick={handleSubmit}>{button}</Button>
             </Grid>
-            <SpecialInput label="image" value={image} onUpdate={event => handleImage(event)} />
-            <SpecialInput label="color" value={color} onUpdate={event => handleColor(event)} />
         </Grid>
     </Box>
     )
