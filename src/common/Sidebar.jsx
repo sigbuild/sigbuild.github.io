@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Topbar from "./Topbar";
+import HeaderBar from "./HeaderBar";
 import Instructions from "./Instructions";
 import { Button, Box, CssBaseline, Divider, Drawer, Toolbar, Typography, BottomNavigation, BottomNavigationAction } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
@@ -15,7 +15,7 @@ export default function LargeSidebar() {
 
     return (
       <Box>
-      <Topbar size="large" />
+      <HeaderBar size="large" />
       <Instructions view="large" close={handleClose} opened={opened} />
       <CssBaseline />
       <Box sx={{ display: "flex"}}>
@@ -62,7 +62,7 @@ export function MediumSidebar() {
   
     return (
       <Box>
-      <Topbar size="medium" />
+      <HeaderBar size="medium" />
       <Instructions view="medium" close={handleClose} opened={opened} />
       <CssBaseline />
         <Box sx={{ display: "flex"}} style={{flexWrap:"wrap"}}>
@@ -94,7 +94,7 @@ export function MobileSidebar() {
     return (
       <Box>
       <Instructions view="mobile" close={handleClose} opened={opened} />
-      <Topbar size="mobile" /> 
+      <HeaderBar size="mobile" /> 
       <BottomNavigation sx={{ zIndex:1600, backgroundColor: "#BFDBEC90", position: 'fixed', height:45, bottom: 0, left: 0, right: 0 }}>
         <BottomNavigationAction style={{fontSize:16}} onClick={toggleDrawer} icon="How-To" />
         <BottomNavigationAction href="https://my.berea.edu" target="_blank" icon="myBerea" />

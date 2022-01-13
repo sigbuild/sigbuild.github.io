@@ -1,12 +1,12 @@
 import React from "react";
 import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material";
 
-export default function Topbar (props){
+export default function HeaderBar (props){
 
     return (
     <Box>
         <CssBaseline />
-        <AppBar position="absolute" style={{zIndex: 1200, backgroundColor:"#005A8B" }}>
+        <AppBar position={props.size==="mobile"?"absolute":"fixed"} style={{zIndex: 1200, backgroundColor:"#005A8B" }}>
             <Toolbar>
                 <Typography variant="h6" noWrap component="div">
                 {props.size!=="large" ? "Signature Builder" : null}
