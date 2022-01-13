@@ -37,10 +37,9 @@ Deploys to the production website [https://sigbuild.herokuapp.com](sigbuild.hero
 As opposed to *development*, *main* includes `"homepage": "https://sigbuild.herokuapp.com"`
 
 ## Dev TODO 
-- Sidebar more content-aware on mobile
 - Add image upload functionality
-- Contact info on right side of screen
 - Cards are their own height
+- Move raw content to normal images
 - Sizes lock aspect ratio checkbox
 - Updates realtime, not 1 character late
 - Fix Whitespace text nodes error 

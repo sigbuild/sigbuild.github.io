@@ -18,18 +18,18 @@ export default function Instructions(props) {
             </Typography>
             <Divider />
             <List>
-                <ListItem> <LooksOne fontSize="large" />
-                    Open Settings (gear icon)
+                <ListItem> <LooksOne fontSize="large" /><span>Open Settings (gear icon)</span>
+                    
                 </ListItem>
-                <ListItem> <LooksTwo fontSize="large" />
-                    Search <span style={{fontWeight: 'bold', margin:4}}>"signature"</span> and paste your signature into the field 
+                <ListItem> <LooksTwo fontSize="large" /><span>Search "signature" and paste your signature into the field </span>
+                    
                 </ListItem>
-                <ListItem> <Looks3 fontSize="large" />
-                    You may set it to be visible by default. Hit save
+                <ListItem> <Looks3 fontSize="large" /><span>You may set it to be visible by default. Hit save</span>
+                    
                 </ListItem>
-                <ListItem> <Looks4 fontSize="large" />
-                    If not default, on emails, click the <MoreHoriz /> dots and 
-                    <span style={{fontWeight: 'bold', marginLeft:4}}>Insert signature</span>
+                <ListItem> <Looks4 fontSize="large" /><span>If not default, on emails, click the <MoreHoriz style={{verticalAlign:"middle", display:"inline"}}/> dots and 
+                    Insert signature</span>
+                    
                 </ListItem>
             </List>
             <Typography variant="h5" style={{textAlign: "center"}}>
@@ -38,23 +38,25 @@ export default function Instructions(props) {
             <Divider />
             <List>
                 <ListItem> <LooksOne fontSize="large" />
-                Open Settings (gear icon)
+                    <span>Open Settings (gear icon)</span>
                 </ListItem>
                 <ListItem> <LooksTwo fontSize="large" />
-                    Select "See all settings" and scroll to <span style={{fontWeight: 'bold', marginLeft:4}}>Signature</span>
+                    <span>Select "See all settings" and scroll to Signature</span>
                 </ListItem>
                 <ListItem> <Looks3 fontSize="large" />
-                    Paste your new signature into the text field
+                    <span>Paste your new signature into the text field</span>
                 </ListItem>
                 <ListItem> <Looks4 fontSize="large" />
-                    You may set it to be visible by default. Hit <span style={{fontWeight: 'bold', marginLeft:4}}>Save Changes</span>
+                    <span>You may set it to be visible by default. Hit Save Changes</span>
                 </ListItem>
                 <ListItem> <Looks5 fontSize="large" />
-                    If not default, on emails, click the <img src="/images/ink_pen_black_20dp.png" alt="ink-pen-black" /> 
-                    pen and <span style={{fontWeight: 'bold', marginLeft:4}}>Insert signature</span>
+                    <span>If not default, on emails, click the 
+                    <img src="/images/gmail_pen.png" alt="ink-pen-black" style={{verticalAlign:"middle", display:"inline"}}/> 
+                    pen and Insert signature</span>
                 </ListItem>
             </List>
-        </Box> 
+            {props.view==="mobile" && <Box style={{height:40}} />}
+        </Box>
     </Drawer>
     );
 };
