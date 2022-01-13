@@ -1,9 +1,10 @@
 import React, {useState} from "react";
-import { Button, Box, CssBaseline, Divider, Drawer, Toolbar, Typography } from "@mui/material";
-import { GitHub } from "@mui/icons-material";
+import Topbar from "./Topbar";
 import Instructions from "./Instructions";
+import { Button, Box, CssBaseline, Divider, Drawer, Toolbar, Typography, BottomNavigation, BottomNavigationAction } from "@mui/material";
+import { GitHub } from "@mui/icons-material";
 
-export default function Sidebar(props) {
+export default function LargeSidebar() {
   const [opened, setOpened] = useState(false);
     function toggleDrawer(){
       setOpened(true);
@@ -14,10 +15,10 @@ export default function Sidebar(props) {
 
     return (
       <Box>
-      <Instructions close={handleClose} opened={opened} />
+      <Topbar size="large" />
+      <Instructions view="large" close={handleClose} opened={opened} />
       <CssBaseline />
-      {props.size==="larger" ? 
-        <Box sx={{ display: "flex"}}>
+      <Box sx={{ display: "flex"}}>
         <Drawer sx={{boxSizing: 'border-box'}} style={{zIndex: 1100}}
           variant="permanent"
           anchor="left">
@@ -46,8 +47,23 @@ export default function Sidebar(props) {
             </Box>
         </Drawer> 
       </Box>
-    : 
+    </Box>
+  );
+}; 
+
+export function MediumSidebar() {
+  const [opened, setOpened] = useState(false);
+    function toggleDrawer(){
+      setOpened(true);
+    }
+    function handleClose(){
+      setOpened(false);
+    }
+  
+    return (
       <Box>
+      <Topbar size="medium" />
+      <Instructions view="medium" close={handleClose} opened={opened} />
       <CssBaseline />
         <Box sx={{ display: "flex"}} style={{flexWrap:"wrap"}}>
         <Drawer sx={{overflow:"auto", boxSizing: 'border-box'}} style={{zIndex: 1100}}
@@ -64,7 +80,27 @@ export default function Sidebar(props) {
           </Drawer> 
         </Box>
       </Box>
+    );
+  };
+
+export function MobileSidebar() {
+  const [opened, setOpened] = useState(false);
+    function toggleDrawer(){
+      setOpened(!opened);
     }
+    function handleClose(){
+      setOpened(false);
+    }
+    return (
+      <Box>
+      <Instructions view="mobile" close={handleClose} opened={opened} />
+      <Topbar size="mobile" /> 
+      <BottomNavigation sx={{ zIndex:1600, backgroundColor: "#BFDBEC90", position: 'fixed', height:45, bottom: 0, left: 0, right: 0 }}>
+        <BottomNavigationAction style={{fontSize:16}} onClick={toggleDrawer} icon="How-To" />
+        <BottomNavigationAction href="https://my.berea.edu" target="_blank" icon="myBerea" />
+        <BottomNavigationAction href="https://moodle.berea.edu" target="_blank" icon="Moodle" />
+        <BottomNavigationAction href="https://github.com/zachneill/signature-builder" target="_blank" color="inherit" icon={<GitHub />}/>
+      </BottomNavigation>
     </Box>
   );
-}
+};

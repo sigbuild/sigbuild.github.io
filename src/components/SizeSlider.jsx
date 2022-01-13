@@ -8,7 +8,7 @@ export default function SizeSlider(props) {
   };
 
   return (
-    <Grid item sx={{ width: 200 }}>
+    <Grid item sx={{ width: 180 }}>
         <Typography style={{textTransform: 'capitalize'}} variant="body1" >{props.label} Size</Typography>
         { props.label=== "name" ?
         <Slider onChange={handleChange} value={props.value} valueLabelDisplay="auto"
@@ -19,6 +19,9 @@ export default function SizeSlider(props) {
         { props.label=== "image" ?
         <Slider onChange={handleChange} value={props.value} valueLabelDisplay="auto"
         step={25} marks min={35} max={335} /> :null }
+        { props.label=== "line" ?
+        <Slider onChange={handleChange} value={props.value} valueLabelDisplay="auto"
+        step={0.1} marks min={0.1} max={3} /> :null }
     </Grid>
   );
 }

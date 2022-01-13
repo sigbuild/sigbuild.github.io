@@ -3,10 +3,9 @@ import '../components/components.css';
 import React, {useState} from "react";
 import CardArea from "../components/CardArea";
 import Form from "../components/Form";
-import Sidebar from "./Sidebar";
-import TopBar from "./TopBar";
-import IsViewportBig from "./Viewport";
-import {Container, Paper} from "@mui/material";
+import LargeSidebar, {MediumSidebar, MobileSidebar} from "./Sidebar";
+import IsViewportLarge, {IsViewportMedium, IsViewportMobile} from "./Viewport";
+import {Container, Paper, Box} from "@mui/material";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -17,11 +16,13 @@ export default function App() {
   return (
     <Container className="App">
       <Paper elevation={2} className="paper" >
-        {IsViewportBig() ? <TopBar size="larger" /> : <TopBar size="smaller" /> }
-        {IsViewportBig() ? <Sidebar size="larger" /> : <Sidebar size="smaller" /> }
+        {IsViewportLarge() && <LargeSidebar /> }
+        {IsViewportMedium() && <MediumSidebar /> }
+        {IsViewportMobile() && <MobileSidebar /> }
 
         <Form addLog={logData} />
         <CardArea data={data} />
+        <Box style={{height:40}} />
       </Paper>
     </Container>
   );

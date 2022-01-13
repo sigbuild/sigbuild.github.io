@@ -22,9 +22,10 @@ export default function Form (props){
     const [nameSize, setNameSize] = useState(18);
     const [detailSize, setDetailSize] = useState(11);
     const [imageSize, setImageSize] = useState(110);
+    const [lineHeight, setLineHeight] = useState(1.15)
     
     let data = [image, name, credentials, pronouns, title, college, department, 
-        address, location, phone, email, color, nameSize, detailSize, imageSize];
+        address, location, phone, email, color, nameSize, detailSize, imageSize, lineHeight];
     
     function updateLogs(){
         props.addLog(data);
@@ -49,16 +50,20 @@ export default function Form (props){
     function handleImageSize(selection){
         setImageSize(selection);
     };
+
+    function handleLineHeight(selection){
+        setLineHeight(selection);
+    };
     // function handleMouse(){
     //     updateLogs();
     // };
 
     function handleKeypress(){
         updateLogs();
-        setButton("Quick Syncing");
+        setButton("Syncing");
         setTimeout(()=>{
-            button!=="Quick Syncing" && setButton("Update");
-        }, 500);
+            button!=="Syncing" && setButton("Update");
+        }, 1000);
     };
 
     function handleSubmit(){
@@ -97,6 +102,8 @@ export default function Form (props){
             <SizeSlider label="name" onSlide={handleKeypress} value={nameSize} onUpdate={event => handleNameSize(event)} />
             <SizeSlider label="detail" onSlide={handleKeypress} value={detailSize} onUpdate={event => handleDetailSize(event)} />
             <SizeSlider label="image" onSlide={handleKeypress} value={imageSize} onUpdate={event => handleImageSize(event)} />
+            <SizeSlider label="line" onSlide={handleKeypress} value={lineHeight} onUpdate={event => handleLineHeight(event)} />
+            
             <Grid item>
                 <Button size="large" color="inherit" variant="contained" onClick={handlePrefill}>Autofill with Berea Values</Button>
             </Grid>

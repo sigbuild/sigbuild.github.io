@@ -3,14 +3,16 @@ import { CardContent } from "@mui/material";
 
 export default function simpleSignature (props){
     let [image, name, credentials, , title, college, department, address, 
-        location, phone, email, color, nameSize, detailSize, imageSize] = props.data;
+        location, phone, email, color, nameSize, detailSize, imageSize, lineHeight] = props.data;
     let details = [title, college, department, address, location, phone];
     !nameSize ? nameSize = 18 : nameSize *= 4/3;
     !detailSize ? detailSize = 11 : detailSize *= 4/3;
+    if (!lineHeight){
+        lineHeight = 1.15;
+    };
     if (!imageSize){
         imageSize = 110;
-    } 
-
+    };
     if (!image){
         image="primary_rgb.png";
     };
@@ -20,7 +22,7 @@ export default function simpleSignature (props){
 
     return ( 
         <CardContent className="simple-signature">
-            <p className="signature" style={{color: color, fontSize:detailSize}}>
+            <p className="signature" style={{color: color, fontSize:detailSize, lineHeight:lineHeight}}>
                 <img className="image" style={{maxInlineSize:imageSize}}
                 src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/signatures/"+image} 
                 alt="college-img" nosend="1" />
