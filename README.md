@@ -16,7 +16,7 @@ You may also see any lint errors in the console.
 
 ### `npm run deploy` 
 
-Deploys to the development site [https://zachneill.github.io/signature-builder](zachneill.github.io/signature-builder). 
+Deploys to the development site [zachneill.github.io/signature-builder](https://zachneill.github.io/signature-builder). 
 
 Make sure the current branch is *development*, not *main*! 
 *development* includes `homepage": "https://zachneill.github.io/signature-builder"` in the package.json.
@@ -33,7 +33,7 @@ actually deploys the app to GitHub Pages.
 
 ### `git push heroku main` 
 
-Deploys to the production website [https://sigbuild.herokuapp.com](sigbuild.herokuapp.com). 
+Deploys to the production website [sigbuild.herokuapp.com](https://sigbuild.herokuapp.com). 
 As opposed to *development*, *main* includes `"homepage": "https://sigbuild.herokuapp.com"`
 
 ## Dev TODO 
