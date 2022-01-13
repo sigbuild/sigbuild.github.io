@@ -14,12 +14,27 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm run build`
+### `npm deploy` 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Deploys to the development site [https://zachneill.github.io/signature-builder](zachneill.github.io/signature-builder). 
 
-The build is minified and the filenames include the hashes.\
+Make sure the current branch is *development*, not *main*! 
+*development* includes `homepage": "https://zachneill.github.io/signature-builder"` in the package.json.
+
+Through the package.json, it just runs the predeploy and deploy scripts: 
+```
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+```
+`npm run build` bundles React in production mode and optimizes the build for the best performance. 
+The build is minified and the filenames include the hashes. `gh-pages -d build` is the command that 
+actually deploys the app to GitHub Pages.
+
+### `git push heroku main` 
+
+Deploys to the production website [https://sigbuild.herokuapp.com](sigbuild.herokuapp.com). 
+As opposed to *development*, *main* includes `"homepage": "https://sigbuild.herokuapp.com"`
 
 ## Dev TODO 
 - Sidebar more content-aware on mobile
