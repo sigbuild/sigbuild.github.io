@@ -51,7 +51,7 @@ export default function Instructions(props) {
                 </ListItem>
                 <ListItem> <Looks5 fontSize="large" />
                     <span>If not default, on emails, click the 
-                    <img src="/images/gmail_pen.png" alt="ink-pen-black" style={{verticalAlign:"middle", display:"inline"}}/> 
+                    <img src={process.env.PUBLIC_URL + "/images/gmail_pen.png"} alt="ink-pen-black" style={{verticalAlign:"middle", display:"inline"}}/> 
                     pen and Insert signature</span>
                 </ListItem>
             </List>
