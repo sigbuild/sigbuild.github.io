@@ -46,7 +46,7 @@ export default function FullSignature (props){
                     <tr style={{color: color}}>
                         <td className="top">
                             <img className={needsPadding ? "image border-padding": "image"} style={{maxInlineSize: imageSize}}
-                            src={"https://raw.githubusercontent.com/zachneill/signature-builder/main/public/images/signatures/"+image} alt="college-img" nosend="1" />
+                            src={"https://raw.githubusercontent.com/zachneill/signature-builder/development/public/images/signatures/"+image} alt="college-img" nosend="1" />
                         </td>
                         <td className="border">
                             <table>
