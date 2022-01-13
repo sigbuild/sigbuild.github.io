@@ -40,6 +40,7 @@ As opposed to *development*, *main* includes `"homepage": "https://sigbuild.hero
 - Add image upload functionality
 - Cards are their own height
 - Move raw content to normal images
+- Reset to default button
 - Sizes lock aspect ratio checkbox
 - Updates realtime, not 1 character late
 - Fix Whitespace text nodes error 

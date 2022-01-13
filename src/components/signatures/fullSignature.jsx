@@ -3,14 +3,17 @@ import { CardContent } from "@mui/material";
 
 export default function FullSignature (props){
     let [image, name, credentials, pronouns, title, college, department, address, 
-        location, phone, email, color, nameSize, detailSize, imageSize] = props.data;
+        location, phone, email, color, nameSize, detailSize, imageSize, lineHeight] = props.data;
     let details = [title, college, department, address, location, phone];
     let needsPadding = false;
     !nameSize ? nameSize = 18 : nameSize *= 4/3;
     !detailSize ? detailSize = 11 : detailSize *= 4/3;
+    if (!lineHeight){
+        lineHeight = 1.15;
+    };
     if (!imageSize){
         imageSize = 110;
-    } 
+    };
     if (!image){
         image="primary_rgb.png";
     };
@@ -37,7 +40,7 @@ export default function FullSignature (props){
     };
 
     return ( 
-        <CardContent className="full-signature" style={{fontSize: detailSize}}>
+        <CardContent className="full-signature" style={{fontSize: detailSize, lineHeight: lineHeight}}>
             <table className="signature">
                 <tbody>
                     <tr style={{color: color}}>
@@ -86,4 +89,4 @@ export default function FullSignature (props){
             </table>
         </CardContent>
     );
-}
+};

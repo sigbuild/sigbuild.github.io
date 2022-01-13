@@ -85,7 +85,6 @@ export function MediumSidebar() {
 
 export function MobileSidebar() {
   const [opened, setOpened] = useState(false);
-  const [view, setView] = useState("mobile");
     function toggleDrawer(){
       setOpened(!opened);
     }
