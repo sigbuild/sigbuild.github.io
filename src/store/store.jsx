@@ -14,8 +14,8 @@ const initialState=[{
     phone:"", 
     email:"", 
     color:"#005A8B",
-    nameSize:"", 
-    detailSize:"",
+    nameSize:"18", 
+    detailSize:"11",
     imageSize:"110", 
     lineHeight:"1.15"
 }];

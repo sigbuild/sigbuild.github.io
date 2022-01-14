@@ -5,9 +5,17 @@ export default function simpleSignature (props){
     let {image, name, credentials, title, college, department, address, 
         location, phone, email, color, nameSize, detailSize, imageSize, lineHeight} = props.data;
     
-    !nameSize ? nameSize = 18 : nameSize *= 4/3;
-    !detailSize ? detailSize = 11 : detailSize *= 4/3;
-    
+    if (!nameSize){
+        nameSize = 18*4/3;
+    } else {
+        nameSize *= 4/3;
+    };
+    if (!detailSize){
+        detailSize = 18*4/3;
+    } else {
+        detailSize *= 4/3;
+    };
+
     return ( 
     <CardContent className="simple-signature">
         <p className="signature" style={{color: color, fontSize:detailSize, lineHeight:lineHeight}}>

@@ -53,11 +53,13 @@ The following considerations have arisen while developing the application.
 ### Bugs/Improvements
 
 - Fix Whitespace text nodes error 
-
+- Fix forced reflow violation
 ### Features/Enhancements
 
 - Add image upload functionality
 - Sizes lock aspect ratio checkbox
+- Add additional detail functionality
+- Add useStyles
 - Use SASS instead of CSS
 - Use yarn instead of npm
 

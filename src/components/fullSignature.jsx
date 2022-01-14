@@ -5,8 +5,17 @@ export default function FullSignature (props){
     let {image, name, credentials, pronouns, title, college, department, address, 
         location, phone, email, color, nameSize, detailSize, imageSize, lineHeight} = props.data;
     let needsPadding = false;
-    nameSize *= 4/3;
-    detailSize *= 4/3;
+
+    if (!nameSize){
+        nameSize = 18*4/3;
+    } else {
+        nameSize *= 4/3;
+    };
+    if (!detailSize){
+        detailSize = 18*4/3;
+    } else {
+        detailSize *= 4/3;
+    };
 
     switch(image) {
         case "ribbon.png": needsPadding = true; break;
@@ -28,18 +37,18 @@ export default function FullSignature (props){
                     <td className="border">
                         <table>
                             <tbody style={{ color: {color} }}>
-                                <tr>
+                                {(name||credentials) && <tr>
                                     <td>
-                                        <span style={{fontSize:nameSize}}>{name} 
+                                        <span style={{fontSize:nameSize}}>{name && <span>{name}</span>} 
                                             {credentials && <span>, {credentials}</span>}
                                         </span>
                                     </td>
-                                </tr>
-                                <tr className="pronouns">
+                                </tr>}
+                                {pronouns&&<tr className="pronouns">
                                     <td>
-                                        {pronouns && <i>{pronouns}</i>}
+                                        {<i>{pronouns}</i>}
                                     </td>
-                                </tr>
+                                </tr>}
                                 {[title, college, department, address, location, phone].map((detail, index)=>(
                                     detail && 
                                     <tr className="top" key={"tr"+index}>
@@ -51,13 +60,13 @@ export default function FullSignature (props){
                                         </td>
                                     </tr>
                                 ))}
-                                <tr className="email">
+                                {email && <tr className="email">
                                     <td>
-                                        {email && <a href={"mailto:"+email} className="email" style={{color: color}}>
+                                        <a href={"mailto:"+email} className="email" style={{color: color}}>
                                         {email}
-                                        </a> }
+                                        </a> 
                                     </td>
-                                </tr>
+                                </tr>}
                             </tbody>
                         </table>
                     </td>
