@@ -1,15 +1,20 @@
 import React from 'react';
-import {Grid, Slider, Typography} from '@mui/material';
+import {Button, Grid, Slider, Typography} from '@mui/material';
 
 export default function SizeSlider(props) {
   function handleChange(event){
     props.onSlide();
     props.onUpdate(event.target.value)
   };
-
+  function handleReset(){
+    props.onSlide();
+    props.onReset();
+  }
   return (
     <Grid item sx={{ width: 180 }}>
-        <Typography style={{textTransform: 'capitalize'}} variant="body1" >{props.label} Size</Typography>
+        <Typography style={{textTransform: 'capitalize'}} variant="body1" >{props.label} Size
+          <Button sx={{ml:2, fontSize:11}} onClick={handleReset}>Reset</Button> 
+        </Typography>
         { props.label=== "name" ?
         <Slider onChange={handleChange} value={props.value} valueLabelDisplay="auto"
         step={1} marks min={4} max={40} /> :null }

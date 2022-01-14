@@ -9,6 +9,7 @@ import {Container, Paper, Box} from "@mui/material";
 
 export default function App() {
   const [data, setData] = useState([]);
+  
   function logData(log){
     setData(log);
   }; 
