@@ -1,8 +1,8 @@
-# College Email Signature Builder
-
-*Production version: 1.0.0*
-
-*Development version: 1.0.1*
+# Email Signature Builder
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zachneill/signature-builder/production?color=g&label=production%20version&style=flat)
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zachneill/signature-builder/development?color=orange&label=development%20version&style=flat)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/zachneill/signature-builder/react?color=blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/zachneill/signature-builder?color=purple&style=flat) 
 
 An application that takes user inputs and builds an email signature. 
 
@@ -63,4 +63,13 @@ The following considerations have arisen while developing the application.
 - Reset to default button
 - Use SASS instead of CSS
 - Use yarn instead of npm
-- Use shields.io for README
+
+## Changelog 
+
+### Build 1.0.1 
+
+This is the current build for production. Line height can now be changed via a slider, and the mobile version includes a navigation bar at the bottom. Other cosmetic changes like margins were made.
+
+### Build 1.0.0 
+
+Version 1.0.0 is the first working copy of SigBuild. It is currently running fine on [sigbuild.herokuapp.com](https://sigbuild.herokuapp.com). 
