@@ -21,23 +21,23 @@ export default function simpleSignature (props){
     };
 
     return ( 
-        <CardContent className="simple-signature">
-            <p className="signature" style={{color: color, fontSize:detailSize, lineHeight:lineHeight}}>
-                <img className="image" style={{maxInlineSize:imageSize}}
+    <CardContent className="simple-signature">
+        <p className="signature" style={{color: color, fontSize:detailSize, lineHeight:lineHeight}}>
+            <img className="image" style={{maxInlineSize:imageSize}}
                 src={"https://raw.githubusercontent.com/zachneill/signature-builder/development/public/images/signatures/"+image} 
                 alt="college-img" nosend="1" />
-                <br />
-                <span style={{fontSize:nameSize}}>{name} 
-                    {credentials && <span>, {credentials} </span>}
-                </span>
-                <br />
-                {details.map((detail, index)=>(
-                    detail && <span key={"detail"+index}>{detail} <br /> </span>
-                ))}
-                {email && <a href={"mailto:"+email} className="email" style={{color: color}}>
-                    {email}
-                </a> }
-            </p>
-        </CardContent>
+            <br />
+            <span style={{fontSize:nameSize}}>{name} 
+                {credentials && <span>, {credentials} </span>}
+            </span>
+            <br />
+            {details.map((detail, index)=>(
+                detail && <span key={"detail"+index}>{detail} <br /> </span>
+            ))}
+            {email && <a href={"mailto:"+email} className="email" style={{color: color}}>
+                {email}
+            </a> }
+        </p>
+    </CardContent>
     );
-}
+};

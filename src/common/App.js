@@ -1,5 +1,5 @@
-import './common.css';
-import '../components/components.css';
+import '../css/common.css';
+import '../css/components.css';
 import React, {useState} from "react";
 import CardArea from "../components/CardArea";
 import Form from "../components/Form";
@@ -15,16 +15,16 @@ export default function App() {
   }; 
   
   return (
-    <Container className="App">
-      <Paper elevation={2} className="paper" >
-        {IsViewportLarge() && <LargeSidebar /> }
-        {IsViewportMedium() && <MediumSidebar /> }
-        {IsViewportMobile() && <MobileSidebar /> }
+  <Container className="App">
+    <Paper elevation={2} className="paper" >
+      {IsViewportLarge() && <LargeSidebar /> }
+      {IsViewportMedium() && <MediumSidebar /> }
+      {IsViewportMobile() && <MobileSidebar /> }
 
-        <Form addLog={logData} />
-        <CardArea data={data} />
-        <Box style={{height:40}} />
-      </Paper>
-    </Container>
+      <Form addLog={logData} />
+      <CardArea data={data} />
+      <Box style={{height:40}} />
+    </Paper>
+  </Container>
   );
 };

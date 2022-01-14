@@ -9,7 +9,7 @@ export default function Topbar (props){
         <AppBar position={props.size==="mobile"?"absolute":"fixed"} style={{zIndex: 1200, backgroundColor:"#005A8B" }}>
             <Toolbar>
                 <Typography variant="h6" noWrap component="div">
-                {props.size!=="large" ? "Signature Builder" : null}
+                    {props.size!=="large" ? "Signature Builder" : null}
                 </Typography>
             </Toolbar>
         </AppBar>
