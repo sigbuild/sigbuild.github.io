@@ -2,8 +2,12 @@ import React from "react";
 import { CardContent } from "@mui/material";
 
 export default function FullSignature (props){
-    let [image, name, credentials, pronouns, title, college, department, address, 
-        location, phone, email, color, nameSize, detailSize, imageSize, lineHeight] = props.data;
+    const data = props.data;
+    let {id, image, name, credentials, pronouns, title, college, department, address, 
+        location, phone, email, color, nameSize, detailSize, imageSize, lineHeight} = data[0];
+    
+    console.log(image)
+    
     let details = [title, college, department, address, location, phone];
     let needsPadding = false;
     !nameSize ? nameSize = 18 : nameSize *= 4/3;

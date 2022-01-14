@@ -1,11 +1,14 @@
 import React, {useState} from "react";
 import Input from "./Input";
+import {useSelector} from "react-redux";
+import { useDispatch } from "react-redux";
 import SpecialInput from "./SpecialInput";
 import {Button, Box, Grid} from "@mui/material";
 import SizeSlider from "./SizeSlider";
 
-export default function Form (props){
-
+export default function Form (){
+    const dispatch = useDispatch();
+    const state = useSelector(state => state.data);    
     const [image, setImage] = useState("primary_rgb.png");
     const [name, setName] = useState("");
     const [credentials, setCredentials] = useState("");
@@ -23,14 +26,34 @@ export default function Form (props){
     const [detailSize, setDetailSize] = useState(11);
     const [imageSize, setImageSize] = useState(110);
     const [lineHeight, setLineHeight] = useState(1.15)
-    const [hookChanged, setHookChanged] = useState(1);
-
-    let data = [image, name, credentials, pronouns, title, college, department, 
-        address, location, phone, email, color, nameSize, detailSize, imageSize, lineHeight];
     
-    function updateLogs(){
-        props.addLog(data);
-        setHookChanged(hookChanged+1);
+    function updateLogs(log){
+        // props.addLog(log);
+        addLogs(log)
+    };
+
+    const addLogs = ()=>{
+        dispatch({
+            type: "CREATE_DATA", 
+            payload: {
+                image:image, 
+                name:name, 
+                credentials:credentials, 
+                pronouns:pronouns, 
+                title:title, 
+                college:college,
+                department:department, 
+                address: address, 
+                location:location, 
+                phone:phone, 
+                email:email, 
+                color:color,
+                nameSize:nameSize, 
+                detailSize:detailSize,
+                imageSize:imageSize, 
+                lineHeight:lineHeight 
+            }
+        });
     };
 
     function handleImage(selection){
