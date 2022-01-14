@@ -1,13 +1,12 @@
 import React from "react";
 import { CardContent } from "@mui/material";
+import { useSelector } from "react-redux";
 
-export default function FullSignature (props){
-    const data = props.data;
-    let {id, image, name, credentials, pronouns, title, college, department, address, 
-        location, phone, email, color, nameSize, detailSize, imageSize, lineHeight} = data[0];
-    
-    console.log(image)
-    
+export default function FullSignature (){
+    const data = useSelector(data => data);    
+    let {image, name, credentials, pronouns, title, college, department, address, 
+        location, phone, email, color, nameSize, detailSize, imageSize, lineHeight} = data;
+        
     let details = [title, college, department, address, location, phone];
     let needsPadding = false;
     !nameSize ? nameSize = 18 : nameSize *= 4/3;

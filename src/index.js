@@ -7,7 +7,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import "@fontsource/league-spartan";
 import { Provider } from 'react-redux';
-import store from "./store";
+import store from "./store/store";
 
 ReactDOM.render(
   <React.StrictMode>
