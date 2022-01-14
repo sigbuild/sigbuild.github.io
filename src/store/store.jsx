@@ -13,14 +13,14 @@ const initialState=[{
     location:"",
     phone:"", 
     email:"", 
-    color:"",
+    color:"#005A8B",
     nameSize:"", 
     detailSize:"",
-    imageSize:"", 
-    lineHeight:""
+    imageSize:"110", 
+    lineHeight:"1.15"
 }];
 
-const Reducer = (state=initialState, action)=>{
+const store = createStore((state=initialState, action)=>{
     const {type, payload} = action;
     switch (type){
         case "CREATE_DATA":
@@ -28,7 +28,5 @@ const Reducer = (state=initialState, action)=>{
         default:
             return state;
     };
-}; 
-
-const store = createStore(Reducer, composeWithDevTools());
+}, composeWithDevTools());
 export default store;

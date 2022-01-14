@@ -52,15 +52,12 @@ The following considerations have arisen while developing the application.
 
 ### Bugs/Improvements
 
-- Updates realtime, not 1 character late
 - Fix Whitespace text nodes error 
-- Updates on autofill
 
 ### Features/Enhancements
 
 - Add image upload functionality
 - Sizes lock aspect ratio checkbox
-- Reset to default button
 - Use SASS instead of CSS
 - Use yarn instead of npm
 

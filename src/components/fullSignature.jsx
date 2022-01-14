@@ -1,45 +1,19 @@
 import React from "react";
 import { CardContent } from "@mui/material";
-import { useSelector } from "react-redux";
 
-export default function FullSignature (){
-    const data = useSelector(data => data);    
+export default function FullSignature (props){
     let {image, name, credentials, pronouns, title, college, department, address, 
-        location, phone, email, color, nameSize, detailSize, imageSize, lineHeight} = data;
-        
-    let details = [title, college, department, address, location, phone];
+        location, phone, email, color, nameSize, detailSize, imageSize, lineHeight} = props.data;
     let needsPadding = false;
-    !nameSize ? nameSize = 18 : nameSize *= 4/3;
-    !detailSize ? detailSize = 11 : detailSize *= 4/3;
-    if (!lineHeight){
-        lineHeight = 1.15;
-    };
-    if (!imageSize){
-        imageSize = 110;
-    };
-    if (!image){
-        image="primary_rgb.png";
-    };
-    if (!color){
-        color="#005A8B";
-    };
+    nameSize *= 4/3;
+    detailSize *= 4/3;
 
     switch(image) {
-        case "ribbon.png":
-            needsPadding = true;
-            break;
-        case "isns_blue.png":
-            needsPadding = true;
-            break;
-        case "isns_black.png":
-            needsPadding = true;
-            break;
-        case "isns_white.png":
-            needsPadding = true;
-            break;
-        default:
-            needsPadding = false;
-            break;
+        case "ribbon.png": needsPadding = true; break;
+        case "isns_blue.png": needsPadding = true; break;
+        case "isns_black.png": needsPadding = true; break;
+        case "isns_white.png": needsPadding = true; break;
+        default: needsPadding = false; break;
     };
 
     return ( 
@@ -66,7 +40,7 @@ export default function FullSignature (){
                                         {pronouns && <i>{pronouns}</i>}
                                     </td>
                                 </tr>
-                                {details.map((detail, index)=>(
+                                {[title, college, department, address, location, phone].map((detail, index)=>(
                                     detail && 
                                     <tr className="top" key={"tr"+index}>
                                         <td>
