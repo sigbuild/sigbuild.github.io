@@ -63,9 +63,9 @@ export default function FullSignature (props){
                                             {pronouns && <i>{pronouns}</i>}
                                         </td>
                                     </tr>
-                                    {details.map((detail)=>(
+                                    {details.map((detail, index)=>(
                                         detail && 
-                                        <tr className="top" key={"td"+detail}>
+                                        <tr className="top" key={"tr"+index}>
                                             <td>
                                                 <span>
                                                     {detail} 

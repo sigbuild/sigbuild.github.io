@@ -1,7 +1,7 @@
 import React from "react";
 import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material";
 
-export default function HeaderBar (props){
+export default function Topbar (props){
 
     return (
     <Box>

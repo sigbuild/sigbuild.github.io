@@ -23,12 +23,14 @@ export default function Form (props){
     const [detailSize, setDetailSize] = useState(11);
     const [imageSize, setImageSize] = useState(110);
     const [lineHeight, setLineHeight] = useState(1.15)
-    
+    const [hookChanged, setHookChanged] = useState(1);
+
     let data = [image, name, credentials, pronouns, title, college, department, 
         address, location, phone, email, color, nameSize, detailSize, imageSize, lineHeight];
     
     function updateLogs(){
         props.addLog(data);
+        setHookChanged(hookChanged+1);
     };
 
     function handleImage(selection){
@@ -98,11 +100,14 @@ export default function Form (props){
         <Grid className="form" container columnSpacing={2} rowSpacing={2}>
             <SpecialInput label="image" value={image} onUpdate={event => handleImage(event)} />
             <SpecialInput label="color" value={color} onUpdate={event => handleColor(event)} />
-            
-            <SizeSlider label="name" onSlide={handleKeypress} value={nameSize} onUpdate={event => handleNameSize(event)} />
-            <SizeSlider label="detail" onSlide={handleKeypress} value={detailSize} onUpdate={event => handleDetailSize(event)} />
-            <SizeSlider label="image" onSlide={handleKeypress} value={imageSize} onUpdate={event => handleImageSize(event)} />
-            <SizeSlider label="line" onSlide={handleKeypress} value={lineHeight} onUpdate={event => handleLineHeight(event)} />
+            <SizeSlider label="name" value={nameSize} onSlide={handleKeypress} 
+                onUpdate={event => handleNameSize(event)} onReset={event=> handleNameSize(18)} />
+            <SizeSlider label="detail" value={detailSize} onSlide={handleKeypress} 
+                onUpdate={event => handleDetailSize(event)} onReset={event=> handleDetailSize(11)} />
+            <SizeSlider label="image" value={imageSize} onSlide={handleKeypress} 
+                onUpdate={event => handleImageSize(event)} onReset={event=> handleImageSize(110)} />
+            <SizeSlider label="line" value={lineHeight} onSlide={handleKeypress} 
+                onUpdate={event => handleLineHeight(event)} onReset={event=> handleLineHeight(1.15)} />
             
             <Grid item>
                 <Button size="large" color="inherit" variant="contained" onClick={handlePrefill}>Autofill with Berea Values</Button>

@@ -15,7 +15,7 @@ export default function CardArea (props){
                 </Button>
                 <SimpleSignature data={props.data}/> 
             </Card>
-            <Card>
+            <Card sx={{mt:2}}>
                 <Button data-clipboard-target=".full-signature" className="clipboard">
                     Copy
                 </Button>
