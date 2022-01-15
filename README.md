@@ -10,7 +10,7 @@ An application that takes user inputs and builds an email signature.
 
 This is a React application built via create-react-app. Helpful scripts include: 
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode on port 3000. 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -31,7 +31,7 @@ Through the package.json, it just runs the predeploy and deploy scripts:
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
 ```
-`npm run build` bundles React in production mode and optimizes the code. 
+`yarn build` bundles React in production mode and optimizes the code. 
 The build is minified and the filenames include the hashes. `gh-pages -d build` is the command that 
 actually deploys the app to GitHub Pages.
 
@@ -62,7 +62,6 @@ The following considerations have arisen while developing the application.
 - Add additional detail functionality
 - Add useStyles
 - Use SASS instead of CSS
-- Use yarn instead of npm
 
 ## Changelog 
 
