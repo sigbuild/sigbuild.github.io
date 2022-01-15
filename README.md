@@ -66,13 +66,13 @@ The following considerations have arisen while developing the application.
 
 ## Changelog 
 
-### Build 1.0.2 -> 1/14/2022
+### Build 1.0.2 -> 1/15/2022
 
-This is the current build for *development*. React Redux is implemented over unnecessary prop traversals. Signatures update realtime and on autofill.
+This is the current build for *development* and *production*. React Redux is implemented over unnecessary prop traversals. Signatures update realtime and on autofill. App uses yarn run build instead of npm run build, although the yarn.lock file and its implementation has yet to work because of MiniCssExtractPlugin errors. 
 
 ### Build 1.0.1 -> 1/13/2022
 
-This is the current build for *production*. Line height can now be changed via a slider, and the mobile version includes a navigation bar at the bottom. Other cosmetic changes like margins were made. 1.0.1 upgrades from Material-UI 4 to MUI 5. 
+Line height can now be changed via a slider, and the mobile version includes a navigation bar at the bottom. Other cosmetic changes like margins were made. 1.0.1 upgrades from Material-UI 4 to MUI 5. 
 
 ### Build 1.0.0 -> 1/12/2022
 
