@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/signature-builder/static/css/main.5e1d6c75.css",
-    "main.js": "/signature-builder/static/js/main.e0b6ce50.js",
+    "main.css": "/signature-builder/static/css/main.1513de64.css",
+    "main.js": "/signature-builder/static/js/main.6c3210d2.js",
     "static/media/roboto-all-500-normal.woff": "/signature-builder/static/media/roboto-all-500-normal.52cb737b682eb9661ee1.woff",
     "static/media/roboto-all-700-normal.woff": "/signature-builder/static/media/roboto-all-700-normal.ef6d1d09b20b877fee4e.woff",
     "static/media/roboto-all-400-normal.woff": "/signature-builder/static/media/roboto-all-400-normal.376ea5d93f71583052f6.woff",
@@ -37,11 +37,11 @@
     "static/media/roboto-greek-ext-300-normal.woff2": "/signature-builder/static/media/roboto-greek-ext-300-normal.04e05839d6a35e046c13.woff2",
     "static/media/roboto-greek-ext-700-normal.woff2": "/signature-builder/static/media/roboto-greek-ext-700-normal.9674bc0ae12c2551d9d1.woff2",
     "index.html": "/signature-builder/index.html",
-    "main.5e1d6c75.css.map": "/signature-builder/static/css/main.5e1d6c75.css.map",
-    "main.e0b6ce50.js.map": "/signature-builder/static/js/main.e0b6ce50.js.map"
+    "main.1513de64.css.map": "/signature-builder/static/css/main.1513de64.css.map",
+    "main.6c3210d2.js.map": "/signature-builder/static/js/main.6c3210d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e1d6c75.css",
-    "static/js/main.e0b6ce50.js"
+    "static/css/main.1513de64.css",
+    "static/js/main.6c3210d2.js"
   ]
 }
