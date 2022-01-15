@@ -9,10 +9,8 @@ export default function Input (props){
             <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <InputLabel id="image-select-label">Image Style</InputLabel>
                 <Select 
-                    value={props.value}
-                    labelId="image-select-label"
-                    label="Select Image"
-                    onChange={event => props.onUpdate(event.target.value)}>
+                    value={props.value} labelId="image-select-label"
+                    label="Select Image" onChange={event => props.onUpdate(event.target.value)}>
                     <MenuItem value="primary_rgb.png">Primary Blue</MenuItem>
                     <MenuItem value="primary_black.png">Primary Black</MenuItem>
                     <MenuItem value="primary_white.png">Primary White</MenuItem>
@@ -33,10 +31,8 @@ export default function Input (props){
         { props.label==="color" && 
             <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <InputLabel id="color-select-label">Text Color</InputLabel>
-                <Select value={props.value}
-                    labelId="color-select-label"
-                    label="Text Color"
-                    onChange={event => props.onUpdate(event.target.value)}>
+                <Select value={props.value} labelId="color-select-label"
+                    label="Text Color" onChange={event => props.onUpdate(event.target.value)}>
                     <MenuItem value="#005A8B">Berea Blue</MenuItem>
                     <MenuItem value="initial">Black/Default</MenuItem>
                     <MenuItem value="#BFDBEC">Berea Light Blue</MenuItem>

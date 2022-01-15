@@ -6,10 +6,14 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import "@fontsource/league-spartan";
+import { Provider } from 'react-redux';
+import store from "./store/store";
 
 ReactDOM.render(
   <React.StrictMode>
+  <Provider store={store}>
     <App />
+  </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

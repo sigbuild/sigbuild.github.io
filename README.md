@@ -52,24 +52,33 @@ The following considerations have arisen while developing the application.
 
 ### Bugs/Improvements
 
-- Updates realtime, not 1 character late
 - Fix Whitespace text nodes error 
-- Updates on autofill
+- Fix forced reflow violation
 
 ### Features/Enhancements
 
 - Add image upload functionality
 - Sizes lock aspect ratio checkbox
-- Reset to default button
+- Add additional detail functionality
+- Add useStyles
 - Use SASS instead of CSS
 - Use yarn instead of npm
 
 ## Changelog 
 
-### Build 1.0.1 
+### Build 1.0.2 -> 1/14/2022
 
-This is the current build for production. Line height can now be changed via a slider, and the mobile version includes a navigation bar at the bottom. Other cosmetic changes like margins were made.
+This is the current build for *development*. React Redux is implemented over unnecessary prop traversals. Signatures update realtime and on autofill.
 
-### Build 1.0.0 
+### Build 1.0.1 -> 1/13/2022
 
-Version 1.0.0 is the first working copy of SigBuild. It is currently running fine on [sigbuild.herokuapp.com](https://sigbuild.herokuapp.com). 
+This is the current build for *production*. Line height can now be changed via a slider, and the mobile version includes a navigation bar at the bottom. Other cosmetic changes like margins were made. 1.0.1 upgrades from Material-UI 4 to MUI 5. 
+
+### Build 1.0.0 -> 1/12/2022
+
+Version 1.0.0 is the first working production copy of SigBuild. It is currently running fine on [sigbuild.herokuapp.com](https://sigbuild.herokuapp.com). 
+The build uses Material-UI instead of custom CSS. 
+
+### Build 0.9.0 -> 1/10/2022
+
+There isn't really a build pre-1.0.0. Version 0.9.0 ultimately marks the pre-development stage. There has yet to be a development build in static form. 
