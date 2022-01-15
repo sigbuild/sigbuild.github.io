@@ -54,6 +54,7 @@ The following considerations have arisen while developing the application.
 
 - Fix Whitespace text nodes error 
 - Fix forced reflow violation
+
 ### Features/Enhancements
 
 - Add image upload functionality
@@ -65,10 +66,14 @@ The following considerations have arisen while developing the application.
 
 ## Changelog 
 
-### Build 1.0.1 
+### Build 1.0.2 -> 1/14/2022
 
-This is the current build for production. Line height can now be changed via a slider, and the mobile version includes a navigation bar at the bottom. Other cosmetic changes like margins were made.
+This is the current build for *development*. React Redux is implemented over unnecessary prop traversals. Signatures update realtime and on autofill.
 
-### Build 1.0.0 
+### Build 1.0.1 -> 1/13/2022
+
+This is the current build for *production*. Line height can now be changed via a slider, and the mobile version includes a navigation bar at the bottom. Other cosmetic changes like margins were made.
+
+### Build 1.0.0 -> 1/12/2022
 
 Version 1.0.0 is the first working copy of SigBuild. It is currently running fine on [sigbuild.herokuapp.com](https://sigbuild.herokuapp.com). 
