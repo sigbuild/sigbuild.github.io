@@ -61,13 +61,16 @@ The following considerations have arisen while developing the application.
 - Sizes lock aspect ratio checkbox
 - Add additional detail functionality
 - Add useStyles
-- Use SASS instead of CSS
 
 ## Changelog 
 
+### Build 1.0.3 -> 1/15/2022
+
+This is the current build for *development*. CSS is fully replaced by SASS, which create-react-app knows to preprocess. The application fully uses yarn instead of npm. MiniCssExtractPlugin errors are fixed via the package.json resolutions workaround. No actual frontend changes were made in particular, just the SASS and yarn upgrades. 
+
 ### Build 1.0.2 -> 1/15/2022
 
-This is the current build for *development* and *production*. React Redux is implemented over unnecessary prop traversals. Signatures update realtime and on autofill. App uses yarn run build instead of npm run build, although the yarn.lock file and its implementation has yet to work because of MiniCssExtractPlugin errors. 
+This is the current build for *production*. React Redux is implemented over unnecessary prop traversals. Signatures update realtime and on autofill. App uses yarn run build instead of npm run build, although the yarn.lock file and its implementation has yet to work because of MiniCssExtractPlugin errors. 
 
 ### Build 1.0.1 -> 1/13/2022
 

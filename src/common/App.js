@@ -1,5 +1,5 @@
-import '../css/common.css';
-import '../css/components.css';
+import '../sass/common.sass';
+import '../sass/components.sass';
 import React from "react";
 import CardArea from "../components/CardArea";
 import Form from "../components/Form";
