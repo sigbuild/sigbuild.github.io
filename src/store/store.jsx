@@ -3,7 +3,7 @@ import {composeWithDevTools} from "redux-devtools-extension";
 
 const initialState=[{
     image:"primary_rgb.png", 
-    name:"Zach", 
+    name:"", 
     credentials:"", 
     pronouns:"", 
     title:"", 
