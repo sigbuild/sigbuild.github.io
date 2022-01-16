@@ -1,4 +1,4 @@
-.card-area {
+body .card-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,7 +12,7 @@
           align-items: flex-start;
 }
 
-.form {
+body .form {
   margin-bottom: 1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -22,30 +22,30 @@
           align-items: center;
 }
 
-.top {
+body .top {
   vertical-align: top;
   margin-top: 0;
 }
 
-.signature {
+body .signature {
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 1rem;
 }
 
-.email {
+body .email {
   text-decoration: none;
 }
 
-.border {
+body .border {
   border-left: solid 1pt;
   padding-left: 8pt;
 }
 
-.border-padding {
+body .border-padding {
   padding-right: 9pt;
 }
 
-.image {
+body .image {
   margin-right: 2pt;
 }
 /*# sourceMappingURL=components.css.map */

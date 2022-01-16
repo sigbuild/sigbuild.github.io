@@ -1,15 +1,25 @@
-body {
-  font-family: 'Georgia', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.sidebar-column, body .sidebar-buttons, body .sidebar-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  bottom: 1.5rem;
+  position: absolute;
 }
 
-.paper {
+body {
+  font-family: 'Georgia', sans-serif;
+}
+
+body .paper {
   margin-top: 1rem;
   padding: 2rem;
 }
 
-.sidebar-typography {
+body .sidebar-typography {
   width: 140pt;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,30 +31,11 @@ body {
   margin: 0.5rem;
 }
 
-.sidebar-buttons {
+body .sidebar-buttons {
   width: 140pt;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  bottom: 1.5rem;
-  position: absolute;
 }
 
-.sidebar-mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: visible;
+body .sidebar-mobile {
   margin-left: 0.1rem;
-  bottom: 1.5rem;
-  position: absolute;
 }
 /*# sourceMappingURL=common.css.map */
