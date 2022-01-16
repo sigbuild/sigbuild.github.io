@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page and console reload when you make changes. You may also see any lint errors in the console.
 
-### `yarn run deploy` 
+### `yarn deploy` 
 
 Deploys to the development site [zachneill.github.io/signature-builder](https://zachneill.github.io/signature-builder). 
 
@@ -28,7 +28,7 @@ Make sure the current branch is *development*!
 Through the package.json, it just runs the predeploy and deploy scripts: 
 ```
   "scripts": {
-    "predeploy": "yarn run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
 ```
 `yarn build` bundles React in production mode and optimizes the code. 
@@ -45,6 +45,7 @@ As opposed to *development*, *production* includes `"homepage": "https://sigbuil
 Checkout *production* and git pull all necessary changes in. Then run `git push heroku production:main`
 
 For first-time setup, run `heroku git:remote -a sigbuild` before attempting to deploy. This adds a git remote for heroku to read. 
+Additionally, only Heroku collaborators can deploy. In Heroku, the only collaborator is zacharyneill@gmail.com. 
 
 ## Dev Checklist
 
