@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page and console reload when you make changes. You may also see any lint errors in the console.
 
-### `npm run deploy` 
+### `yarn run deploy` 
 
 Deploys to the development site [zachneill.github.io/signature-builder](https://zachneill.github.io/signature-builder). 
 
@@ -28,7 +28,7 @@ Make sure the current branch is *development*!
 Through the package.json, it just runs the predeploy and deploy scripts: 
 ```
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
 ```
 `yarn build` bundles React in production mode and optimizes the code. 
