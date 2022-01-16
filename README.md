@@ -58,6 +58,7 @@ The following considerations have arisen while developing the application.
 
 ### Features/Enhancements
 
+- Add choices among fonts
 - Add image upload functionality
 - Sizes lock aspect ratio checkbox
 - Add additional detail functionality
