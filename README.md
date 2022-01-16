@@ -67,7 +67,7 @@ The following considerations have arisen while developing the application.
 
 ### Build 1.0.3 -> 1/15/2022
 
-This is the current build for *development*. CSS is fully replaced by SASS, which create-react-app knows to preprocess. The application fully uses yarn instead of npm. MiniCssExtractPlugin errors are fixed via the package.json resolutions workaround. No actual frontend changes were made in particular, just the SASS and yarn upgrades. 
+This is the current build for *development*. CSS is developmentally replaced by SASS, which preprocesses on save via the Live Sass Compiler VSCode extension. The application fully uses yarn instead of npm. MiniCssExtractPlugin errors are fixed via the package.json resolutions workaround. No actual frontend changes were made in particular, just the SASS and yarn upgrades. 
 
 ### Build 1.0.2 -> 1/15/2022
 
