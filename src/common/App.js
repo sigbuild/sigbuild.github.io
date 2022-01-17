@@ -1,3 +1,4 @@
+import '../css/main.css'
 import '../css/common.css';
 import '../css/components.css';
 import React from "react";

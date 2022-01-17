@@ -1,0 +1,39 @@
+@use "main" as * 
+
+body
+	.paper
+		margin-top: 1rem
+		padding: 2rem
+	.topbar 
+		z-index: 1200
+		background-color: $berea-blue
+	.sidebar-box
+		width: $sidebar-length
+		margin: 0.5rem
+		@extend .sidebar-column
+	.main-title
+		text-align: center
+		font-family: "League Spartan"
+		font-weight: 600
+	.sidebar-buttons
+		width: $sidebar-length
+		@extend .sidebar-bottom-column
+	.sidebar-mobile
+		margin-left: 0.1rem
+		@extend .sidebar-bottom-column
+	.sidebar-drawer
+		overflow: auto
+		box-sizing: border-box
+		z-index: 1100
+	.bottom-bar-mobile
+		z-index: 1600
+		background-color: "#BFDBEC90"
+		position: fixed
+		height: 45px
+		bottom: 0
+		left: 0
+		right: 0
+	.mt-10
+		margin-top: 10px
+	.mb-20
+		margin-bottom: 20px

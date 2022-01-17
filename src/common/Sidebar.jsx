@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Topbar from "./Topbar";
 import Instructions from "./Instructions";
-import { Button, Box, CssBaseline, Divider, Drawer, Toolbar, Typography, BottomNavigation, BottomNavigationAction } from "@mui/material";
+import { Button, Divider, Box, CssBaseline, Drawer, Toolbar, Typography, BottomNavigation, BottomNavigationAction } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 
 export default function LargeSidebar() {
@@ -19,28 +19,27 @@ export default function LargeSidebar() {
       <Instructions view="large" close={handleClose} opened={opened} />
       <CssBaseline />
       <Box sx={{ display: "flex"}}>
-        <Drawer sx={{boxSizing: 'border-box'}} style={{zIndex: 1100}}
+        <Drawer className="sidebar-drawer"
           variant="permanent"
           anchor="left">
           <Toolbar />
-          <Box className="sidebar-typography">
-            <Typography className="main-title" variant="h3" style={{textAlign:"center", fontFamily: 'League Spartan', fontWeight:600}}>
+          <Box className="sidebar-box">
+            <Typography className="main-title" variant="h3">
               Signature Builder
             </Typography>
-            <Divider style={{marginTop:10}} />
-            <Divider style={{marginBottom:20}} />
-
+            <Divider className="mt-10" />
+            <Divider className="mb-20" />
             <Typography paragraph>
               Build a professional signature to include at the end of your emails! 
             </Typography>
-            <Divider style={{marginTop:10}} />
-            <Divider style={{marginBottom:20}} />
+            <Divider className="mt-10" />
+            <Divider className="mb-20" />
             <Typography paragraph>
-              Click <Button variant="outlined" style={{color:"#005A8B"}} size="small" onClick={toggleDrawer}>here</Button> for instructions 
+              Click <Button variant="outlined" className="berea-blue" size="small" onClick={toggleDrawer}>here</Button> for instructions 
               for Outlook and Gmail. 
             </Typography>
           </Box>
-          <Box className="sidebar-buttons" style={{color:"#005A8B"}}>
+          <Box className="sidebar-buttons berea-blue centered">
             <Button href="https://my.berea.edu" target="_blank">Go to myBerea</Button>
             <Button href="https://moodle.berea.edu" target="_blank">Go to Moodle</Button>
             <Button href="https://github.com/zachneill/signature-builder" target="_blank">Go to Source Code</Button>
@@ -65,12 +64,12 @@ export function MediumSidebar() {
       <Topbar size="medium" />
       <Instructions view="medium" close={handleClose} opened={opened} />
       <CssBaseline />
-        <Box sx={{ display: "flex"}} style={{flexWrap:"wrap"}}>
-        <Drawer sx={{overflow:"auto", boxSizing: 'border-box'}} style={{zIndex: 1100}}
+        <Box sx={{ display: "flex"}} >
+        <Drawer className="sidebar-drawer"
           variant="permanent"
           anchor="left">
           <Toolbar />
-          <Box style={{width:85}}/>
+          <Box sx={{width:85}}/>
           <Box className="sidebar-mobile">
             <Button onClick={toggleDrawer}>How-To</Button>
             <Button href="https://my.berea.edu" target="_blank">myBerea</Button>
@@ -96,7 +95,7 @@ export function MobileSidebar() {
   <Box>
     <Instructions view="mobile" close={handleClose} opened={opened} />
     <Topbar size="mobile" /> 
-    <BottomNavigation sx={{ zIndex:1600, backgroundColor: "#BFDBEC90", position: 'fixed', height:45, bottom: 0, left: 0, right: 0 }}>
+    <BottomNavigation className="bottom-bar-mobile">
       <BottomNavigationAction style={{fontSize:16}} onClick={toggleDrawer} icon="How-To" />
       <BottomNavigationAction href="https://my.berea.edu" target="_blank" icon="myBerea" />
       <BottomNavigationAction href="https://moodle.berea.edu" target="_blank" icon="Moodle" />
