@@ -8,7 +8,7 @@ An application that takes user inputs and builds an email signature.
 
 ## Scripts
 
-This is a React application built via create-react-app. Helpful scripts include: 
+This is a React application built via create-react-app. The only dependency is yarn, which can be added via `npm i yarn -g`. Helpful scripts include: 
 
 ### `yarn start`
 
