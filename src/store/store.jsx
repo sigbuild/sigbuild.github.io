@@ -2,7 +2,7 @@ import { createStore } from "redux";
 import {composeWithDevTools} from "@redux-devtools/extension";
 
 const initialState=[{
-    image:"primary_rgb.png", 
+    image:"", 
     name:"", 
     credentials:"", 
     pronouns:"", 
@@ -13,11 +13,11 @@ const initialState=[{
     location:"",
     phone:"", 
     email:"", 
-    color:"#005A8B",
-    nameSize:"18", 
-    detailSize:"11",
-    imageSize:"110", 
-    lineHeight:"1.15"
+    color:"",
+    nameSize:"", 
+    detailSize:"",
+    imageSize:"", 
+    lineHeight:""
 }];
 
 const store = createStore((state=initialState, action)=>{

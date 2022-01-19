@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import SpecialInput from "./SpecialInput";
 import {Button, Box, Grid} from "@mui/material";
 import SizeSlider from "./SizeSlider";
+import '../css/components.css';
 
 export default function Form (){
     const dispatch = useDispatch();

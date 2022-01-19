@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Grid, Slider, Typography} from '@mui/material';
+import '../css/components.css';
 
 export default function SizeSlider(props) {
 

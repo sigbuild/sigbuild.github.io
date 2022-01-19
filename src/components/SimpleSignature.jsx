@@ -1,5 +1,6 @@
 import React from "react";
 import { CardContent } from "@mui/material";
+import '../css/components.css';
 
 export default function SimpleSignature (props){
     let {image, name, credentials, title, college, department, address, 

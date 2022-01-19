@@ -1,5 +1,6 @@
 import React from "react";
 import { CardContent } from "@mui/material";
+import '../css/components.css';
 
 export default function FullSignature (props){
     let {image, name, credentials, pronouns, title, college, department, address, 

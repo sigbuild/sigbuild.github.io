@@ -4,6 +4,7 @@ import FullSignature from "./FullSignature";
 import {Card, Button, Grid} from "@mui/material";
 import ClipboardJS from "clipboard";
 import { useSelector } from "react-redux";
+import '../css/components.css';
 
 export default function CardArea (){
     new ClipboardJS('.clipboard');

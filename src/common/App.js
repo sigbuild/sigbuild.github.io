@@ -1,6 +1,5 @@
 import '../css/main.css'
-import '../css/common.css';
-import '../css/components.css';
+
 import React from "react";
 import CardArea from "../components/CardArea";
 import Form from "../components/Form";

@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/common.css';
 
 export default function IsViewportLarge() { 
     const [width, setWidth] = React.useState(window.innerWidth);

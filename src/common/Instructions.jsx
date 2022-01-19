@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Divider, Typography, Drawer, Button, List, ListItem } from "@mui/material";
 import { CloseRounded, LooksOne, LooksTwo, Looks3, Looks4, MoreHoriz, Looks5 } from "@mui/icons-material";
+import '../css/common.css';
 
 export default function Instructions(props) {
     function close(){

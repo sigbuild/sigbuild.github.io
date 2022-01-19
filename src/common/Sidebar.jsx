@@ -3,6 +3,7 @@ import Topbar from "./Topbar";
 import Instructions from "./Instructions";
 import { Button, Divider, Box, CssBaseline, Drawer, Toolbar, Typography, BottomNavigation, BottomNavigationAction } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
+import '../css/common.css';
 
 export default function LargeSidebar() {
   const [opened, setOpened] = useState(false);

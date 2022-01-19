@@ -1,5 +1,6 @@
 import React from "react";
 import {TextField, Typography, Grid} from "@mui/material";
+import '../css/components.css';
 
 export default function Input (props){
     

@@ -19,6 +19,10 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+body .paper {
+  margin-top: 1rem;
+  padding: 2rem;
+}
 
 body .card-area {
   display: flex;

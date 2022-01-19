@@ -19,11 +19,11 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-
 body .paper {
   margin-top: 1rem;
   padding: 2rem;
 }
+
 body .topbar {
   z-index: 1200;
   background-color: #005A8B;
