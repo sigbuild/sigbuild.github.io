@@ -59,9 +59,11 @@ The following considerations have arisen while developing the application.
 ### Features/Enhancements
 
 - Add choices among fonts
+- Add color picker 
+- Add vertical bar resizer
 - Add image upload functionality
-- Sizes lock aspect ratio checkbox
 - Add additional detail functionality
+- Sizes lock aspect ratio checkbox
 - Add useStyles
 
 ## Changelog 
