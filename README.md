@@ -17,17 +17,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page and console reload when you make changes. You may also see any lint errors in the console.
 
-### `git push heroku development:main` 
+### `yarn development` 
 
 Deploys to the development website [sigbuild.herokuapp.com](https://sigbuild.herokuapp.com). 
 
 Make sure the current branch is *development*!  
 As opposed to *production*, *development* includes `"homepage": "https://sigbuild.herokuapp.com"`
 
-Checkout *development* and git pull all necessary changes in. Then run `git push heroku development:main`
+Checkout *development* and git pull all necessary changes in. Then run `yarn development`. This runs the script 
+`heroku git:remote -a sigbuild && git push heroku development:main`, which adds a remote for heroku to read, then uses it to 
+deploy to the main/production branch of [SigBuild](https://sigbuild.herokuapp.com).
 
-For first-time setup, run `heroku git:remote -a sigbuild` before attempting to deploy. This adds a git remote for heroku to read. 
-Additionally, only Heroku collaborators can deploy. In Heroku, the only collaborator is zacharyneill@gmail.com. 
+For first-time setup, you may need to run `heroku login` before attempting to deploy. This affords heroku deployment access. 
+Additionally, only Heroku collaborators can deploy to production. In Heroku, collaborators are currently zacharyneill@gmail.com and dev-sigbuild@gmail.com. 
 
 ### `yarn deploy` 
 
@@ -35,7 +37,7 @@ Deploys to the production site [sigbuild.github.io](https://sigbuild.github.io).
 
 Make sure the current branch is *production*! 
 
-*development* includes `"homepage": "https://sigbuild.github.io"` in the package.json.
+*production* includes `"homepage": "https://sigbuild.github.io"` in the package.json.
 
 Through the package.json, it just runs the predeploy and deploy scripts: 
 ```

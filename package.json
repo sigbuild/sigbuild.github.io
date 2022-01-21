@@ -29,7 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass --watch src/sass:src/css --no-source-map"
+    "sass": "sass --watch src/sass:src/css --no-source-map", 
+    "development": "heroku git:remote -a sigbuild && git push heroku development:main"
   },
   "eslintConfig": {
     "extends": [
