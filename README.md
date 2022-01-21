@@ -68,11 +68,11 @@ The following considerations have arisen while developing the application.
 
 ### Build 1.0.3 -> 1/15/2022
 
-This is the current build for *development*. CSS is developmentally replaced by SASS, which preprocesses on save via the Live Sass Compiler VSCode extension. The application fully uses yarn instead of npm. MiniCssExtractPlugin errors are fixed via the package.json resolutions workaround. No actual frontend changes were made in particular, just the SASS and yarn upgrades. 
+This is the current build for *production* and *development*. Development is now [sigbuild.herokuapp.com](https://sigbuild.herokuapp.com) instead of zachneill.github.io/signature-builder. Production is now [sigbuild.github.io](https://sigbuild.github.io) instead of sigbuild.herokuapp.com. CSS is developmentally replaced by SASS, which preprocesses on save via the Live Sass Compiler VSCode extension. The application fully uses yarn instead of npm. MiniCssExtractPlugin errors are fixed via the package.json resolutions workaround. No major frontend changes were made in particular, just the SASS and yarn upgrades. 
 
 ### Build 1.0.2 -> 1/15/2022
 
-This is the current build for *production*. React Redux is implemented over unnecessary prop traversals. Signatures update realtime and on autofill. App uses yarn run build instead of npm run build, although the yarn.lock file and its implementation has yet to work because of MiniCssExtractPlugin errors. 
+React Redux is implemented over unnecessary prop traversals. Signatures update realtime and on autofill. App uses yarn run build instead of npm run build, although the yarn.lock file and its implementation has yet to work because of MiniCssExtractPlugin errors. 
 
 ### Build 1.0.1 -> 1/13/2022
 
