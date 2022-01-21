@@ -21,7 +21,7 @@ export default function SimpleSignature (props){
     <CardContent className="simple-signature">
         <p className="signature" style={{color: color, fontSize:detailSize, lineHeight:lineHeight}}>
             <img className="image" style={{maxInlineSize:imageSize}}
-                src={"https://raw.githubusercontent.com/zachneill/signature-builder/development/public/images/signatures/"+image} 
+                src={"https://raw.githubusercontent.com/sigbuild/sigbuild.github.io/development/public/images/signatures/"+image} 
                 alt="college-img" nosend="1" />
             <br />
             <span style={{fontSize:nameSize}}>{name} 
