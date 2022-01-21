@@ -10,11 +10,11 @@ export default function Instructions(props) {
 
     return (
     <Drawer anchor="right" open={props.opened} onClose={close} BackdropProps={{ invisible: true }}>
-        <Button onClick={close} style={{justifyContent: "flex-start"}}>
-            <CloseRounded style={{color:"#A9A9A9"}} fontSize="large" />
+        <Button sx={{justifyContent:"flex-start"}} onClick={close}>
+            <CloseRounded className="gray" fontSize="large" />
         </Button>
         <Box role="presentation">
-            <Typography variant="h5" style={{textAlign: "center"}}>
+            <Typography className="text-centered" variant="h5">
                 Instructions for Outlook (Browser)
             </Typography>
             <Divider />
@@ -33,7 +33,7 @@ export default function Instructions(props) {
                     
                 </ListItem>
             </List>
-            <Typography variant="h5" style={{textAlign: "center"}}>
+            <Typography className="text-centered" variant="h5">
                 Instructions for Gmail
             </Typography>
             <Divider />
@@ -56,7 +56,7 @@ export default function Instructions(props) {
                     pen and Insert signature</span>
                 </ListItem>
             </List>
-            {props.view==="mobile" && <Box style={{height:40}} />}
+            {props.view==="mobile" && <Box className="box-spacer" />}
         </Box>
     </Drawer>
     );

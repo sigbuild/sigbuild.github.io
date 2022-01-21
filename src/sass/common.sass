@@ -1,11 +1,11 @@
-@use "main" as * 
+@use "partials/helpers" as * 
 
 body
 	.topbar 
 		z-index: 1200
 		background-color: $berea-blue
 	.sidebar-box
-		width: $sidebar-length
+		width: $sidebar-width
 		margin: 0.5rem
 		@extend .sidebar-column
 	.main-title
@@ -13,7 +13,7 @@ body
 		font-family: "League Spartan"
 		font-weight: 600
 	.sidebar-buttons
-		width: $sidebar-length
+		width: $sidebar-width
 		@extend .sidebar-bottom-column
 	.sidebar-mobile
 		margin-left: 0.1rem
@@ -30,7 +30,3 @@ body
 		bottom: 0
 		left: 0
 		right: 0
-	.mt-10
-		margin-top: 10px
-	.mb-20
-		margin-bottom: 20px

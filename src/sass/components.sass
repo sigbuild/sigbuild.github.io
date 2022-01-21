@@ -1,6 +1,12 @@
-@use "main" as *
+@use "partials/helpers" as *
 
 body
+	.special-input
+		@extend .m-1
+		width: 120px
+	.reset-button 
+		@extend .ml-2
+		font-size: 11px
 	.card-area
 		display: flex 
 		flex-wrap: wrap 
@@ -20,8 +26,7 @@ body
 		text-decoration: none 
 	.border
 		border-left: solid 1pt 
-		padding-left: 8pt 
-	.border-padding
-		padding-right: 9pt 
+		@extend .pl-3
 	.image
-		margin-right: 2pt 
+		@extend .mr-2
+		@extend .pl-5

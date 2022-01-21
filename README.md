@@ -54,13 +54,11 @@ The following considerations have arisen while developing the application.
 ### Bugs/Improvements
 
 - Fix Whitespace text nodes error 
-- Fix forced reflow violation
 
 ### Features/Enhancements
 
 - Add choices among fonts
 - Add color picker 
-- Add vertical bar resizer
 - Add image upload functionality
 - Add additional detail functionality
 - Sizes lock aspect ratio checkbox

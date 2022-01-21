@@ -8,7 +8,7 @@ import '../css/components.css';
 
 export default function Form (){
     const dispatch = useDispatch();
-    const [image, setImage] = useState("primary_rgb.png");
+    const [image, setImage] = useState("primary_blue.png");
     const [name, setName] = useState("");
     const [credentials, setCredentials] = useState("");
     const [pronouns, setPronouns] = useState("");
@@ -50,7 +50,7 @@ export default function Form (){
     });
 
     function handlePrefill(){
-        setImage("primary_rgb.png");
+        setImage("primary_blue.png");
         setCollege("Berea College");
         setLocation("Berea, KY");
     };

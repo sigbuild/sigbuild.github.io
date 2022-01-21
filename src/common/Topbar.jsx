@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material";
+import { AppBar, CssBaseline, Toolbar, Typography, Box } from "@mui/material";
 import '../css/common.css';
 
 export default function Topbar (props){
@@ -14,7 +14,7 @@ export default function Topbar (props){
                 </Typography>
             </Toolbar>
         </AppBar>
-        <Box component="main" sx={{ p: 2 }}></Box>
+        <Box className="pb-20" component="main"></Box>
     </Box>
     )
 }

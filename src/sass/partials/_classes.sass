@@ -1,5 +1,27 @@
 @use "variables" as *
 
+$spaceamounts: (0, 1, 2, 3, 4, 5, 10, 15, 20, 25, 30)
+$sides: (top, bottom, left, right, all)
+
+@each $space in $spaceamounts 
+	@each $side in $sides
+		@if $side == 'all'
+			.m-#{$space}
+				margin: #{$space}pt
+			.p-#{$space}
+				padding: #{$space}pt
+		@else
+			.m#{str-slice($side, 0, 1)}-#{$space}
+				margin-#{$side}: #{$space}pt
+			.p#{str-slice($side, 0, 1)}-#{$space}
+				padding-#{$side}: #{$space}pt
+
+.box-spacer
+	height: 40px
+
+.text-centered
+	text-align: center
+
 .sidebar-column
 	display: flex
 	flex-direction: column
@@ -14,3 +36,6 @@
 
 .berea-blue
 	color: $berea-blue
+
+.gray 
+	color: $gray

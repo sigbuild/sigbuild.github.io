@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import Topbar from "./Topbar";
+import BarDivider from "./BarDivider";
 import Instructions from "./Instructions";
-import { Button, Divider, Box, CssBaseline, Drawer, Toolbar, Typography, BottomNavigation, BottomNavigationAction } from "@mui/material";
+import { Button, Box, CssBaseline, Drawer, Toolbar, Typography, BottomNavigation, BottomNavigationAction } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 import '../css/common.css';
 
@@ -28,13 +29,11 @@ export default function LargeSidebar() {
             <Typography className="main-title" variant="h3">
               Signature Builder
             </Typography>
-            <Divider className="mt-10" />
-            <Divider className="mb-20" />
-            <Typography paragraph>
+            <BarDivider />
+            <Typography paragraph m={0}>
               Build a professional signature to include at the end of your emails! 
             </Typography>
-            <Divider className="mt-10" />
-            <Divider className="mb-20" />
+            <BarDivider />
             <Typography paragraph>
               Click <Button variant="outlined" className="berea-blue" size="small" onClick={toggleDrawer}>here</Button> for instructions 
               for Outlook and Gmail. 

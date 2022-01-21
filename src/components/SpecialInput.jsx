@@ -7,7 +7,7 @@ export default function Input (props){
     return (
     <Grid item>
         { props.label==="image" &&
-            <FormControl sx={{ m: 1, minWidth: 120 }}>
+            <FormControl className="special-input">
                 <InputLabel id="image-select-label">Image Style</InputLabel>
                 <Select 
                     value={props.value} labelId="image-select-label"
@@ -30,7 +30,7 @@ export default function Input (props){
             </FormControl>
         }
         { props.label==="color" && 
-            <FormControl sx={{ m: 1, minWidth: 120 }}>
+            <FormControl className="special-input">
                 <InputLabel id="color-select-label">Text Color</InputLabel>
                 <Select value={props.value} labelId="color-select-label"
                     label="Text Color" onChange={event => props.onUpdate(event.target.value)}>

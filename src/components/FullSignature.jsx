@@ -5,7 +5,6 @@ import '../css/components.css';
 export default function FullSignature (props){
     let {image, name, credentials, pronouns, title, college, department, address, 
         location, phone, email, color, nameSize, detailSize, imageSize, lineHeight} = props.data;
-    let needsPadding = false;
 
     if (!nameSize){
         nameSize = 18*4/3;
@@ -18,21 +17,13 @@ export default function FullSignature (props){
         detailSize *= 4/3;
     };
 
-    switch(image) {
-        case "ribbon.png": needsPadding = true; break;
-        case "isns_blue.png": needsPadding = true; break;
-        case "isns_black.png": needsPadding = true; break;
-        case "isns_white.png": needsPadding = true; break;
-        default: needsPadding = false; break;
-    };
-
     return ( 
     <CardContent className="full-signature" style={{fontSize: detailSize, lineHeight: lineHeight}}>
         <table className="signature">
             <tbody>
                 <tr style={{color: color}}>
                     <td className="top">
-                        <img className={needsPadding ? "image border-padding": "image"} style={{maxInlineSize: imageSize}}
+                        <img className="image" style={{maxInlineSize: imageSize}}
                             src={"https://raw.githubusercontent.com/zachneill/signature-builder/development/public/images/signatures/"+image} 
                             alt="college-img" nosend="1" />
                     </td>

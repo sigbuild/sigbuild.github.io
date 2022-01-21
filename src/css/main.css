@@ -1,21 +1,3 @@
-.sidebar-column, .sidebar-bottom-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar-bottom-column {
-  bottom: 1.5rem;
-  position: absolute;
-}
-
-.berea-blue-background {
-  background-color: #005A8B;
-}
-
-.berea-blue {
-  color: #005A8B;
-}
-
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
