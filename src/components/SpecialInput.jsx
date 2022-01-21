@@ -12,13 +12,13 @@ export default function Input (props){
                 <Select 
                     value={props.value} labelId="image-select-label"
                     label="Select Image" onChange={event => props.onUpdate(event.target.value)}>
-                    <MenuItem value="primary_rgb.png">Primary Blue</MenuItem>
+                    <MenuItem value="primary_blue.png">Primary Blue</MenuItem>
                     <MenuItem value="primary_black.png">Primary Black</MenuItem>
                     <MenuItem value="primary_white.png">Primary White</MenuItem>
                     <MenuItem value="secondary_blue.png">Secondary Blue</MenuItem>
                     <MenuItem value="secondary_black.png">Secondary Black</MenuItem>
                     <MenuItem value="secondary_white.png">Secondary White</MenuItem>
-                    <MenuItem value="horizontal_rgb.png">Horizontal Blue</MenuItem>
+                    <MenuItem value="horizontal_blue.png">Horizontal Blue</MenuItem>
                     <MenuItem value="horizontal_black.png">Horizontal Black</MenuItem>
                     <MenuItem value="horizontal_white.png">Horizontal White</MenuItem>
                     <MenuItem value="isns_blue.png">IS&S Blue</MenuItem>
