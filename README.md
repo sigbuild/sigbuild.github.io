@@ -17,13 +17,25 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page and console reload when you make changes. You may also see any lint errors in the console.
 
+### `git push heroku development:main` 
+
+Deploys to the development website [sigbuild.herokuapp.com](https://sigbuild.herokuapp.com). 
+
+Make sure the current branch is *development*!  
+As opposed to *production*, *development* includes `"homepage": "https://sigbuild.herokuapp.com"`
+
+Checkout *development* and git pull all necessary changes in. Then run `git push heroku development:main`
+
+For first-time setup, run `heroku git:remote -a sigbuild` before attempting to deploy. This adds a git remote for heroku to read. 
+Additionally, only Heroku collaborators can deploy. In Heroku, the only collaborator is zacharyneill@gmail.com. 
+
 ### `yarn deploy` 
 
-Deploys to the development site [zachneill.github.io/signature-builder](https://zachneill.github.io/signature-builder). 
+Deploys to the production site [sigbuild.github.io](https://sigbuild.github.io). 
 
-Make sure the current branch is *development*! 
+Make sure the current branch is *production*! 
 
-*development* includes `"homepage": "https://zachneill.github.io/signature-builder"` in the package.json.
+*development* includes `"homepage": "https://sigbuild.github.io"` in the package.json.
 
 Through the package.json, it just runs the predeploy and deploy scripts: 
 ```
@@ -34,18 +46,6 @@ Through the package.json, it just runs the predeploy and deploy scripts:
 `yarn build` bundles React in production mode and optimizes the code. 
 The build is minified and the filenames include the hashes. `gh-pages -d build` is the command that 
 actually deploys the app to GitHub Pages.
-
-### `git push heroku production:main` 
-
-Deploys to the production website [sigbuild.herokuapp.com](https://sigbuild.herokuapp.com). 
-
-Make sure the current branch is *production*!  
-As opposed to *development*, *production* includes `"homepage": "https://sigbuild.herokuapp.com"`
-
-Checkout *production* and git pull all necessary changes in. Then run `git push heroku production:main`
-
-For first-time setup, run `heroku git:remote -a sigbuild` before attempting to deploy. This adds a git remote for heroku to read. 
-Additionally, only Heroku collaborators can deploy. In Heroku, the only collaborator is zacharyneill@gmail.com. 
 
 ## Dev Checklist
 

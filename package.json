@@ -2,7 +2,7 @@
   "name": "signature-builder",
   "version": "1.0.3",
   "private": true,
-  "homepage": "https://sigbuild.github.io",
+  "homepage": "https://sigbuild.herokuapp.com",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
