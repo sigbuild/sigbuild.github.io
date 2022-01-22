@@ -97,3 +97,11 @@ The build uses Material-UI instead of custom CSS.
 ### Build 0.9.0 -> 1/10/2022
 
 There isn't really a build pre-1.0.0. Version 0.9.0 ultimately marks the pre-development stage. There has yet to be a development build in static form. 
+
+## Issues Encountered
+
+### EPERM: operation not permitted, open 'C:\Program Files\nodejs\pnpm'
+Install yarn with `npm install yarn -g`
+
+### Error: spawn cmd.exe ENOENT
+Add C:\Windows\System32 to the global PATH environment variable. 
