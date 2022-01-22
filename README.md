@@ -1,4 +1,4 @@
-# Email Signature Builder
+# SigBuild - Email Signature Builder
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zachneill/signature-builder/production?color=g&label=production%20version&style=flat)
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zachneill/signature-builder/development?color=orange&label=development%20version&style=flat)
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/zachneill/signature-builder/react?color=blue)
@@ -8,7 +8,12 @@ An application that takes user inputs and builds an email signature.
 
 ## Scripts
 
-This is a React application built via create-react-app. The only dependency is yarn, which can be added via `npm i yarn -g`. Helpful scripts include: 
+This is a React application built via create-react-app. There are 2 major dependencies: 
+
+- [Node.js](https://nodejs.org/en/download/)
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+- [yarn](https://yarnpkg.com/getting-started/install)
+  - If Node is installed, yarn can also be added via npm install yarn -g
 
 ### `yarn start`
 
