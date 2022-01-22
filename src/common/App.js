@@ -1,8 +1,8 @@
 import React from "react";
+import IsViewportLarge, {IsViewportMedium, IsViewportMobile} from "./Viewport";
 import CardArea from "../components/CardArea";
 import Form from "../components/Form";
 import LargeSidebar, {MediumSidebar, MobileSidebar} from "./Sidebar";
-import IsViewportLarge, {IsViewportMedium, IsViewportMobile} from "./Viewport";
 import {Container, Paper, Box} from "@mui/material";
 import '../css/main.css'
 

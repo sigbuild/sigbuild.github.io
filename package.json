@@ -1,6 +1,6 @@
 {
   "name": "signature-builder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "homepage": "https://sigbuild.github.io",
   "dependencies": {
@@ -11,6 +11,7 @@
     "@mui/icons-material": "^5.2.5",
     "@mui/material": "^5.2.8",
     "clipboard": "^2.0.8",
+    "concurrently": "^7.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
@@ -29,7 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass --watch src/sass:src/css --no-source-map"
+    "sass": "sass --watch src/sass:src/css --no-source-map", 
+    "development": "heroku git:remote -a sigbuild && git push heroku development:main"
   },
   "eslintConfig": {
     "extends": [
@@ -51,7 +53,6 @@
   },
   "devDependencies": {
     "@redux-devtools/extension": "^3.1.0",
-    "concurrently": "^7.0.0",
     "gh-pages": "^3.2.3"
   },
   "optionalDependencies": {
