@@ -105,3 +105,6 @@ Install yarn with `npm install yarn -g`
 
 ### Error: spawn cmd.exe ENOENT
 Add C:\Windows\System32 to the global PATH environment variable. 
+
+### Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+We need to use this [Mars React Buildpack](https://github.com/mars/create-react-app-buildpack.git) and add it to Heroku. 
