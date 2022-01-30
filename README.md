@@ -15,28 +15,28 @@ This is a React application built via create-react-app. There are 2 major depend
 - [yarn](https://yarnpkg.com/getting-started/install)
   - If Node is installed, yarn can also be added via npm install yarn -g
 
-### `yarn start`
+### `yarn watch`
 
-Runs the app in the development mode on port 3000. 
+Concurrently watches for SASS and runs the app in the development mode on port 3000. 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page and console reload when you make changes. You may also see any lint errors in the console.
+The page and console reload when you make changes. You may also see any errors in the console.
 
-### `yarn development` 
+### `yarn deploy-development` 
 
 Deploys to the development website [sigbuild.herokuapp.com](https://sigbuild.herokuapp.com). 
 
 Make sure the current branch is *development*!  
 As opposed to *production*, *development* includes `"homepage": "https://sigbuild.herokuapp.com"`
 
-Checkout *development* and git pull all necessary changes in. Then run `yarn development`. This runs the script 
+Checkout *development* and git pull all necessary changes in. Then run `yarn deploy-development`. This runs the script 
 `heroku git:remote -a sigbuild && git push heroku development:main`, which adds a remote for heroku to read, then uses it to 
 deploy to the main/production branch of [SigBuild](https://sigbuild.herokuapp.com).
 
 For first-time setup, you may need to run `heroku login` before attempting to deploy. This affords heroku deployment access. 
 Additionally, only Heroku collaborators can deploy to production. In Heroku, collaborators are currently zacharyneill@gmail.com and dev-sigbuild@gmail.com. 
 
-### `yarn deploy` 
+### `yarn deploy-production` 
 
 Deploys to the production site [sigbuild.github.io](https://sigbuild.github.io). 
 
@@ -44,7 +44,7 @@ Make sure the current branch is *production*!
 
 *production* includes `"homepage": "https://sigbuild.github.io"` in the package.json.
 
-Through the package.json, it just runs the predeploy and deploy scripts: 
+Through the package.json, it just eventually runs the predeploy and deploy scripts: 
 ```
   "scripts": {
     "predeploy": "yarn build",
