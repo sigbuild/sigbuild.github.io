@@ -8,7 +8,7 @@ An application that takes user inputs and builds an email signature.
 
 ## Scripts
 
-This is a React application built via create-react-app. There are 2 major dependencies: 
+This is a React application built via create-react-app. There are 3 major dependencies: 
 
 - [Node.js](https://nodejs.org/en/download/)
 - [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
