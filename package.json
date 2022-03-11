@@ -26,12 +26,13 @@
   "scripts": {
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "start": "concurrently \"react-scripts start\" \"sass --watch src/sass:src/css --no-source-map\" ",
+    "deploy-production": "yarn deploy",
+    "deploy-development": "heroku git:remote -a sigbuild && git push heroku development:main",
+    "start": "react-scripts start",
+    "watch": "concurrently \"react-scripts start\" \"sass --watch src/sass:src/css --no-source-map\" ", 
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "sass": "sass --watch src/sass:src/css --no-source-map", 
-    "development": "heroku git:remote -a sigbuild && git push heroku development:main"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
